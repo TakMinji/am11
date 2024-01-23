@@ -1,0 +1,73 @@
+*{
+    margin: 0; padding: 0;
+}
+html,body,.wrap{
+    height: 100%;
+}
+.wrap aside{
+    width: 250px; height: 100%; background-color: lightgray; 
+    position: fixed; left: 0; top: 0; padding: 30px 15px; box-sizing: border-box;
+}
+.wrap aside header{
+    margin-bottom: 50px; 
+}
+.wrap aside header h1 a{
+    display: block;
+}
+.wrap aside header h1 a img{
+    border: 3px solid darkgray; display: block; width: 150px; margin: 0 auto;
+}
+.wrap aside nav ul{
+    list-style: none;
+}
+.wrap aside nav ul li{
+    margin-bottom: 15px; text-align: center;
+}
+.wrap aside nav ul li a{
+    display: block; font-size: 20px; color: slateblue;
+    text-decoration: none;
+}
+.wrap aside nav ul li a:hover{
+    text-decoration: underline; color: darkorchid; 
+}
+.wrap aside footer{
+    position: absolute; bottom: 30px; font-size: 12px; color: midnightblue;
+    background-color: lightskyblue; 
+}
+/* 
+▲ aside position fixed 기준으로 bottom : 30px 이동한 것
+fixed안에 있는 absolute는 상위좌표 fixed 기준으로 움직일 수 있다.
+sticky는 안됨 
+*/
+.wrap article{
+    background-color: paleturquoise; padding-left: 265px;
+}
+/* 
+부모기준에서 자손들 안쪽으로 밀어넣는 상황이기 때문에 padding-left로 밀어준 것 
+margin-left는 인됨 >> 배경이 죽음 
+*/
+.wrap article h2,
+.wrap article blockquote,
+.wrap article q{
+    margin-bottom: 100px;
+}
+.wrap article h2{
+    font-size: 40px; color: midnightblue; font-weight: bold;
+}
+.wrap article blockquote{
+    border: 5px solid darkblue; padding: 30px; box-sizing: border-box;
+    font-size: 26px;
+}
+.wrap article q{
+    display: block; font-size: 20px;
+}
+.wrap article div{
+    margin-bottom: 50px;
+}
+.wrap article div h3{
+    color: purple; font-size: 30px; margin-bottom: 50px;
+}
+.wrap article div p{
+    font-size: 20px; line-height: 40px; color: seagreen;
+}
+

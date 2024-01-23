@@ -1,0 +1,26 @@
+html,
+body,
+.wrap{
+    height: 100%;
+}
+body, p{
+    margin: 0;
+}
+.wrap{
+    background-image: url('../images/pt.gif'); background-repeat: repeat-y;
+    /* css에서는 숫자를 제외한 글자에는 모두 ''붙여줘야함 
+    css는 html밖에 못바라보기 때문에 js나 다른 프로그램에서 오작동함  */
+    /* pattern 제어 >> background-repeat / 
+    default값이 repeat이기 때문에 패턴 발생 막으려면 no-repeat 써줘야함 */
+}
+.wrap p{
+    background-color: #0cf; padding: 20px; margin-bottom: 20px;
+}
+.wrap button{
+    background-image: url('../images/pt_ex.png'); border: none; color: white;
+    padding: 0 80px; line-height: 75px; 
+    /* pattern height가 75px이기 때문에 height 75px 이상 넣어주면 끊겨서 나옴
+    (편방향 pattern이기 때문) */
+    /* line-height(줄간)를 height(높이)대용으로 쓸 때 주의점 : 줄바꿈 현상 */
+}
+

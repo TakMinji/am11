@@ -1,0 +1,25 @@
+body{
+    font-size: 12px; 
+}
+/* h1 12px 적용안됨 >> 이미 user agent stylesheet 2em 갖고있어서 /
+1em = 12px로 규정해버림, 2em 갖고있기때문에 픽셀로 전환하면 24px */
+h1{
+    font-size: 12px; color: #f0c;
+}
+/* em 쓰지말라고 강제로 픽셀 규정한 것 */
+img{
+    width: 150px; border: 3px solid #3f3;
+}
+ul,ol,dl{
+    color: #60f;
+}
+/* grouping */
+ul li{
+    font-size: 16px; font-weight: bold;
+}
+ol li{
+    font-size: 20px; text-decoration: underline;
+}
+dl{
+    font-size: 35px;
+}

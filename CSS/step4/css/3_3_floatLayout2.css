@@ -1,0 +1,59 @@
+*{
+    margin: 0; padding: 0;
+}
+.wrap{
+    width: 960px; margin: 0 auto;
+}
+.wrap header{
+    background-color: #ff6a00;
+}
+
+.wrap header:after{
+    content: ''; display: block; clear: both;
+}
+.wrap header h1{
+    text-align: center; color: white; background-color: rgba(255, 0, 0, 0.5);
+    width: 130px; float: left; line-height: 55px;
+}
+/* line-height 계산법 : 글자 정중앙 기준으로 ..*/
+.wrap header nav{
+    background-color: rgba(0, 0, 255, 1); width: 830px; float: left;
+}
+.wrap header nav ul{
+    text-align: center;
+}
+/* inline-block으로 변한 상태의 li들을 가운데로 정렬하기 위함 */
+.wrap header nav ul li{
+    display: inline-block; 
+}
+/* 기본 list-item 상태의 li를 너비설정 자동에 부모공간 가운데 정렬 될 수 있게 함 */
+.wrap header nav ul li a{
+    color: white; line-height: 55px; display: block;
+}
+/* a 태그는 inline이라 line-height를 줘도 display요소를 바꿔주지 않으면 적용된게 안보임 */
+/* header Fin */
+
+section{
+    margin-bottom: 300px;
+}
+/* footer 사이 간격 설정 */
+section:after{
+    content: '' ; display: block; clear: both;
+}
+section h2{
+    background-color: skyblue;
+}
+section article{
+    float: left; width: 33.33%;
+}
+section article h3{
+    background-color: black; color: white;
+}
+
+section article ul li{
+    display: block; font-size: 16px; line-height: 35px;
+}
+/* defaultFontsize : 16px >> 왜 적어줬냐 ? : rem,em단위 사용안함 >> browser 기본설정을 변경하면 fontsize 없는 애들은 변함.*/
+footer{
+    background-color: #4800ff; text-align: center; color: white; line-height: 55px;
+}
