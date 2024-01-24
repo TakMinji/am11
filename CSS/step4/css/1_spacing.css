@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+}
+.firstDiv{
+    background-color: #555;
+    margin: 10px;
+    padding-bottom: 30px;
+}
+.firstDiv article{
+    background-color: #039; color: white; 
+}
+/* 
+*padding : 안쪽여백
+*margin : 바깥쪽 여백
+
+동일선상에 있는 애들끼리 떨어뜨리고 싶을 때 margin
+(paddng 절대 못씀)
+
+부모와 자손의 간격을 떨어뜨리고 싶을때
+자손이 부모를 margin으로 떠어뜨리는게 아님
+부모가 자손을 떨어지라고 해야함
+이 때 padding을 쓰는 것 
+
+margin : 서로 사이 간격이 남는다.
+
+padding을 넣으면 수치가 커진다
+
+부모 >> 자손 padding
+동위선상 margin.
+*/
+.secondDiv{
+    background-color: #ddd; margin: 20px;
+}
+/* 
+div는 많이쓰니까 class앞에 태그를 안붙인 것
+원래는 앞에 태그 안붙여도 인식하지만 가시성을 위해 붙이는 것 */
+/* 
+margin은 같은 방향에서 만나면 서로가 상쇄됨, 가산이 안됨
+ex)margin이 10px이랑 20px이 만나도 3px이 안됨
+곧 margin은 한 방향으로 쓰는게 유리하다  
+-left, right 있다면 left를 위주로 쓸 것
+-top, bottom 중 bottom 위주로 쓸 것
+*/
+.centerDiv{
+    width: 40%; border: 1px solid #33f; text-align: center; margin: 0 auto;
+    padding : 30px 10%; box-sizing: border-box;
+/* margin : 0 auto >> 0 상하 auto 좌우 : 좌우의 남는 공간을 자동으로 
+(부모너비 - 자손너비) / 2(좌,우) >> 중앙공식 
+컨테이너 등급 block 요소는 width 100%이기 때문에 margin 0 auto 적용해도 적용이 안됨
+width를 조절해주거나 해야함.
+box-sizing : box size 잡는걸 어떻게 해줄지 물어보는 것 default 값은 content-box
+border-box는 딱 맞게 해주는 것 
+*/
+}
+.centerDiv article{
+    margin: 10px; 
+    background-color: #f33;
+    color: white;
+}
+/* margin과 padding은 같은 방향에서 만나면 절대 섞이지 않는다 서로가 가산됨
+따라서 margin과 padding이 만날 상황을 만들면 안됨 */
+
+

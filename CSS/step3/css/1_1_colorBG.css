@@ -1,0 +1,20 @@
+html,body{
+    height: 100%;
+}
+
+body,.wrap p{
+    margin: 0;
+}
+
+.wrap{
+    background-color: skyblue; height: 100%;
+    /* height : px단위를 쓰면 줄어들면 대응을 못함 
+    *자손(.wrap)에게만 100%를 줘버리면 인식을 못함 >> 부모에게도 100%를 줘야 인식 가능 */
+}
+.topLine input{
+    background-color: transparent; border: 1px solid black; padding: 10px 5px;
+    /* transparent : 배경 투명 */
+}
+.wrap p{
+    padding: 15px; background-color: pink;
+}

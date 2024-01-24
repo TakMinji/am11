@@ -1,0 +1,18 @@
+a{
+    text-decoration: none; font-size: 20px; display: inline-block; padding: 10px;
+}
+a:link{
+    color: olive;
+}
+a:hover{ /* js : onmouseOver */
+    color: #3cf; text-decoration: underline; 
+/* hover 모바일 전환해도 touch로 인식되지만 js에서는 안됨(마우스만 인식) */
+}
+a:active{
+    color: #f00;
+}
+/* click 했을 때 , 거의 안쓰고 js에서 다른 용도로 쓰임 */
+a:visited{
+    color: lightgreen;
+}
+/* 방문한 적이 있는 곳은 color를 바꾸는 것 */

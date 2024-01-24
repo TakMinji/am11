@@ -1,0 +1,34 @@
+body,figure{
+    margin: 0;
+}
+ul{
+    margin: 0; padding: 0; list-style: none;
+}
+ul:after{
+    content: ''; display: block; clear: both;
+}
+ul li{
+    width: 33.33%; float: left; l
+    border: 1px solid red; box-sizing: border-box;
+}
+
+ul li figure > *{
+    float: left; width: 49%;
+}
+/* 부모입장에서의 직계자손 전체에게 동일한 속성주기 가능 */
+
+ul li figure img{
+    margin-right: 2%;
+}
+ul li figure figcaption{
+    border-bottom: 1px solid #555;
+}
+/* figure img에만 float 줬을 땐 figcaption에게 width를 안줘도 됬는데
+figcaption에게 float를 준 순간 width를 줘야함 >> width 합 100% 되야함 */
+
+ul li figure figcaption dl dt{
+    font-size: 24px; margin-bottom: 35px; 
+}
+ul li figure figcaption dl dd{
+    font-size: 14px; line-height: 24px;
+}

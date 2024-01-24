@@ -1,0 +1,35 @@
+body{
+    margin: 0; height: 2000px;
+}
+.position_A{
+    position: absolute; width: 150px; height: 150px; background-color: #fc0;
+    left: 300px; top: 300px;
+}
+.position_R{
+    width: 150px; height: 150px; background-color: #0f0; margin: 0 auto;
+    position: relative; margin-top: 55px;
+}
+.position_R .position_A2{
+    position: absolute; width: 50px; height: 50px; background-color: #0ff;
+    top: 50px; left: 50px;
+}
+.position_F{
+    background-color: #9f9; position: fixed; width: 100%; line-height: 55px; top: 0; left: 0;
+}
+/* ▲ 보통 header에 쓰이는 고정 속성값 */
+/* 
+? position : fixed은 무조건 browser의 좌,상을 기준으로 움직인다.
+* browser의 scroll 영향을 받지 않는다. (고정)
+! position을 해제 시키는 방법 : static - positioning을 해제, 기존 속성으로 돌려놓음.
+*/
+.position_S{
+    position: sticky; top: 55px; width: 0; width: 100px; height: 100px; background-color: blueviolet;
+}
+/*
+? position : sticky는 자신에게 부여된 top 좌표에 window.scroll이 도달 할 경우 fixed됨.
+* 그렇지 않을 때는 absolute로 변환.
+! 하단 감지 불가.
+
+.position_S의 위치가 top 좌표에 도달했을 때 scroll 멈춤 
+ex) header에 맞게 걸치고싶으면 header 높이인 55px을 top 좌표에 주면됨
+*/
