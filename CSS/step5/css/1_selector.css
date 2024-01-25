@@ -119,6 +119,12 @@ h1 바로 뒤에있는 h2 선택하는 것, ~보다 +를 자주씀
 .stringAttrSelector h1[title|="탈의실"]{
     color: deeppink;
 }
+.eventSelector{
+    margin-bottom: 50px;
+}
+.eventSelector a{
+    display: block; margin-bottom: 20px;
+}
 .eventSelector a:link{ /* ? 대상:link가 걸린 상태 = href attr을 지닌 상태. */
     color: red; background-color: black; text-decoration: none;
 }
@@ -136,8 +142,18 @@ h1 바로 뒤에있는 h2 선택하는 것, ~보다 +를 자주씀
     border: 5px solid deeppink;
 }
 /* focus 쓸 때 웹접근성 고대비 홈페이지 추천 */
-
-
+.statusSelector input[type='checkbox'] + label{
+    line-height: 20px; display: inline-block; transition: all .75s ease-out;
+}
+/* overflow는 감추기만 할 뿐 공간은 존재함 */
+.statusSelector input[type='checkbox']:checked + label{
+    line-height: 0px; 
+    font-size: 0;
+}
+/* 
+input(또는 select)이 check가 된 상황 선택자 >> :checked 
+label이 check되면 사라지게 만드는 상황임 
+*/
 
 
 
