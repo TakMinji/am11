@@ -206,6 +206,21 @@ child : 부모 기준으로 바라보는 순서
 /* nth : n번째,n이 숫자가 되어주는 것 */
 /* sementic태그 Fin */
 
+/* <of-type - 위 nth-child와 다르게 자손들끼리 집는 것> 
+>> 쓰는 경우
+안에 구조가 단순하고 반복되는 구조에서는 of-type을 쓸 일이 없음 child가 유리함 
+그러나 우리가 일반적으로 잡는 구조라고 했을 때 child가 불리히고 of-type쓰는게 훨씬 편함*/
+.shapeSelector h1:nth-of-type(2n){
+    color: #f06;
+}
+.shapeSelector h2:first-of-type{
+    color: #0c6;
+}
+.shapeSelector h3:last-of-type{
+    color: #30f;
+}
+/* todo. 위 문법을 child로 바꾸서 같은 결과가 나오게 만들기 */
+
 
 
 
