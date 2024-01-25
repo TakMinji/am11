@@ -151,10 +151,66 @@ h1 바로 뒤에있는 h2 선택하는 것, ~보다 +를 자주씀
     font-size: 0;
 }
 /* 
-input(또는 select)이 check가 된 상황 선택자 >> :checked 
+input이 check가 된 상황 선택자 >> :checked 
 label이 check되면 사라지게 만드는 상황임 
+select Tag는 -> :selected 사용하면 됨
 */
+.statusSelector input:enabled::placeholder{
+    /* input default -disabled -> enabled로 변경되었을 때 상황 */
+    background-color: black; color: white;
+}
+.statusSelector input:disabled{
+    /* 
+    ! readonly <=> disabled : 혼동해서 사용하면 안됨.
+    1. readonly : 읽기전용. server에서 값을 전달받은 상태에서 수정이 불가능한 상황.
+        ex. 회원정보에서 ID
+    2. disabled : 비활성화. server에 값을 전달한 적이 없는 불가능한 상태.
+        ex. 결제수단 선택할건데 무통장입금, 신용카드, 휴대폰 결제 ...
+            이 중 하나 선택하면 나머지는 중복없이 선택 못하게 해야하는 상황
+    */
+    background-color: lightgray; color: darkgrey;
+}
+.virtualSelector ul{
+    list-style: none; margin: 30px 0; padding: 0; overflow: hidden; 
+    background-color: lightgoldenrodyellow;
+}
+.virtualSelector ul li{
+    width: 14.28%; box-sizing: border-box; padding: 15px; float: left;
+}
 
+/* <가상 선택자> */
+.virtualSelector ul li:first-child{
+    border-radius: 30px 0 0 30px;
+}
+/* ul에서 첫번째 자손 호출 */
+.virtualSelector ul li:last-child{
+    border-radius: 0 30px 30px 0;
+}
+/* ul에서 마지막 자손 호출 */
+/*
+child : 부모 기준으로 바라보는 순서 
+위에서 li가 중요한게 아닌 ul이 중요
+*/
+.virtualSelector ul li:nth-child(2n+1){
+    /* 
+    ! css에서 2n+1 >> odd / 2n >> even 이렇게 선택해서 쓰기도함 
+    다만 css에서 0을 배제시켜서 odd와 even이 바뀌면서 짝,홀이 바껴버림
+    우리가 쓰는 방법이 js에서 쓰기 좋아서 절대 저렇게 안씀.
+    */
+    background-color: #444; color: #fff;
+}
+
+.virtualSelector ul li:nth-child(2n){
+    background-color: #09f;
+}
+/* nth : n번째,n이 숫자가 되어주는 것 */
+
+
+
+
+
+/* html,css,js mdn사이트 즐겨찾기 해놓고 뭐가 나타나고 변경되는지 자주 체크하기 */
 /* 
 <git 강제푸쉬>
-git push -u origin main --force */
+git push -u origin main --force 
+*/
