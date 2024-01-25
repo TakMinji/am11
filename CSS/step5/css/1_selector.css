@@ -1,0 +1,94 @@
+
+.tagSelector h1{color:#0c0; font-size:20px;}
+.tagSelector p{color:#0cf; font-size:15px;}
+.tagSelector span{color:#336; font-size:13px;}
+
+/*태그선택자 사용법*/
+
+.idSelector p#paragraph1{font-size:16px; text-decoration:underline;}
+.idSelector p#paragraph2{color:#09F; text-decoration:line-through;}
+.idSelector p#paragraph3{font-weight:bold; text-decoration:overline;}
+
+/*ID선택자 사용법*/
+
+.classSelector p.f_size{font-size:20px;}
+.classSelector p.f_weight{font-weight:bold;}
+.classSelector p.f_color{color:#9cf;}
+
+/*CLASS 선택자 사용법 + 다중 클래스 지정 */
+
+.attrSelector fieldset{
+    border: 1px solid #555; background-color: slateblue;
+    border-radius: 30px 0 30px;
+}
+.attrSelector fieldset legend{
+    border: 1px solid slateblue; background-color: #555; color: white;
+    padding: 10px; border-radius: 10px 0 10px;
+}
+.attrSelector fieldset ul{
+    margin: 0; padding: 0; list-style: none;
+}
+.attrSelector fieldset ul li{
+    font-size: 14px; color: white; line-height: 30px;
+}
+.attrSelector fieldset ul li label:not([for$='Ex']){
+    width: 100px; display: inline-block;
+}
+/* 
+▲ label중에 for값이 끝이 Ex로 끝나는 애들을 뺀 나머지를 의미함 
+▲ not은 부정문
+$ >> 뒤를 의미함, 해석하면 뒤에 텍스트가 EX로 끝나는애들 
+*/
+.attrSelector fieldset ul li input[type="text"]{
+    background-color: salmon; border: 3px solid lightpink; color: maroon;
+}
+/* 
+▲ [type=""] 지정 선택자 
+"", '' 홑.쌍따음표 둘다 가능함
+"" - 쌍따음표는 홑따음표를 품을 수 있어서 문자를 여러개 쓸 때 
+     >>>>  ex) "'text''submit'" 
+'' - 홑따음표는 한개만 지정해서 쓸 수 있음 
+*/
+.attrSelector fieldset ul li input[type="password"]{
+    background-color: lightgreen; border: 3px solid lime; color: forestgreen;
+}
+.attrSelector fieldset ul li input input[type='radio']{
+    background-color: black; border: 5px solid yellow;
+}
+.attrSelector fieldset ul li input input[type='checkbox']{
+    background-color: black; color: 5px solid yellowgreen;
+}
+.directSelector > h1{
+    font-size: 22px; color: #66f;
+}
+/* directSeletor class의 직계 h1 */
+.directSelector > span{
+    font-size: 18px; color: #906;
+}
+/* 
+span을 여러번 쓴 잘못된 구조로 인해 직계는 정상적으로 작동했지만 다 바뀌어버림 
+실무에서는 버블링, 버블이펙트 현상이라고 함.
+*/
+.sameSelector h1~h2{
+    background-color: #333;
+}
+/*
+ ▲ 동위선택자 : 동일한 구조에 있는 애들 선택하는 것 
+*/
+/* 
+같은 공간 내에서 h1을 기준으로 이하에 있는 모든 애들 선택하는 것 
+*/
+.sameSelector h1+h2{
+    font-size: 40px; color: #fcf;
+}
+/* 
+h1 바로 뒤에있는 h2 선택하는 것, ~보다 +를 자주씀 
+*/
+.stringAttrSelector img[src$='png']{
+    width: 100px; border: 3px solid red;
+}
+
+
+
+
+
