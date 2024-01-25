@@ -132,9 +132,10 @@ h1 바로 뒤에있는 h2 선택하는 것, ~보다 +를 자주씀
     color: gray; background-color: white;
     /* border: 1px solid gray; */
 }
-.eventSelector a:focus{
+.eventSelector a:focus{ /* 대상: 에 초점이 맞춰진 상태 */
     border: 5px solid deeppink;
 }
+/* focus 쓸 때 웹접근성 고대비 홈페이지 추천 */
 
 
 
