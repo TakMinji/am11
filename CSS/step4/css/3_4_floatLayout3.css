@@ -10,6 +10,7 @@ header{
     background-color: #6ff; position:relative;
 }
 header h1{
+<<<<<<< HEAD
     font-size: 16px; width: 250px; background-color: slateblue; color: white;  
     text-align: center; margin: 0 auto; line-height: 40px;
 }
@@ -20,6 +21,13 @@ header div{
 input 검사시 나오는 높이합 : 30px / 절반 15px
 h1에 준 line-height : 40px - input 절반 높이 15px = 25px 하면 가운데 위치함 
 */
+=======
+    font-size: 16px; width: 250px; background-color: slateblue; margin: 0 auto;
+    color: white; text-align: center; line-height: 40px;
+}
+header div{
+    position: absolute; right: 0; top: 24px;
+>>>>>>> 68a11d885e291e81c14c2d4397df178be4a83bca
 }
 header div:after{
     content: ''; display: block; clear: both;
@@ -27,6 +35,7 @@ header div:after{
 header div input{
     display: block; float: left; box-sizing: border-box;
     font-size: 14px; border: 1px solid darkgreen;
+<<<<<<< HEAD
 /* block 제외 나머지 요소들은 float 쓰고싶으면 display block으로 바꾸면됨 */
     line-height: 26px;
 }
@@ -37,6 +46,14 @@ header div input[type='submit']{
 header div input#searchBar{
     width: 80%;  background-color: rgb(255, 172, 216);
     /* padding: 7px 0; */
+=======
+}
+header div input[type='submit']{
+    width: 20%; padding: 6px 0;
+}
+header div input#searchBar{
+    width: 80%; padding: 7px 0 8px; background-color: rgb(255, 172, 216);
+>>>>>>> 68a11d885e291e81c14c2d4397df178be4a83bca
 }
 header nav{
     background-color: #3cf;
@@ -48,10 +65,17 @@ header nav ul li{
     display: inline-block;
 }
 header nav ul li.marginLeft{
+<<<<<<< HEAD
     margin-left: 40px;
 }
 header nav ul li a{
     display: block; line-height: 40px; text-decoration: none; color: black; 
+=======
+    margin-left: 50px;
+}
+header nav ul li a{
+    text-decoration: none; color: black; line-height: 40px;
+>>>>>>> 68a11d885e291e81c14c2d4397df178be4a83bca
 }
 header nav ul li a:hover{
     color: white;
