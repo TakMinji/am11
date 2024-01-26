@@ -224,17 +224,50 @@ child : 부모 기준으로 바라보는 순서
 .textSelector h1::first-letter{
     font-size: 100px; color: #09f;
 }
+/* 
+::first-letter >> 앞 글자만 선택하는 선택자 
+*비중요
+*/
 .textSelector p::first-line{
     font-size: 38px; line-height: 30px; color: #090; text-decoration: underline;
 }
+/* 
+::first-line >> 첫 줄 선택자
+줄바꿈되는 애들은 css에서 배제됨
+last는 없음 
+*비중요
+*/
+
+.backandfrontSelector p{
+    counter-increment: rint;
+}
+/* 
+counter-increment: ; 
+몇개인지 세라고 명령하는 것 - 안에는 알아들을 수 있는걸로 내 마음대로 넣으면됨(ex.rint)*/
+.backandfrontSelector p::before{
+    content: counter(rint) ".";
+}
+/* 
+content는 없는 곳에 무언가 강제로 넣기위해 쓰는 태그임 
+숫자를 세는 태그 counter();
+괄호안에는 세워야하는 대상을 넣어주면 됨
+앞공간에다 숫자를 세는 걸 강제로 끼워넣은 것
+*/
+
+.backandfrontSelector p::after{
+    content: "-" attr(data-page) "page"; font-weight: bold;
+    color: deeppink;
+}
+/* before 위(전위), after 아래(후위) */
+
+
 
 
 
 /*
 <Tip> 
 html,css,js mdn사이트 즐겨찾기 해놓고 뭐가 나타나고 변경되는지 자주 체크하기 
-*/
-/* 
+
 <git 강제푸쉬>
 git push -u origin main --force 
 */
