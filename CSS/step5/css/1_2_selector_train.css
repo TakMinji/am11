@@ -1,4 +1,35 @@
+/*
+Todo.
+max 필요 X, 
+h, p에 width만 잘 주면됨 퍼센트 h :40% 나머지 60%
+6대4비율 
+*/
+
 body,
 article{
     margin: 0;
+}
+article{
+    clear: both;
+}
+article:not(:last-of-type){
+    margin-bottom: 20px;
+}
+article > :first-child{
+    width: 40%;  font-size: 100px; background-color: gray; color: white;
+}
+article:nth-of-type(2n+1) > :first-child{
+    float: right; margin: 0 0 10px 20px; 
+}
+/* article에서 홀수애들 선택 >(직계)에서 첫번째 애들 */
+article:nth-of-type(2n) > :first-child{
+    float: left; margin: 10px 20px 0px 0px;
+}
+/* article에서 짝수애들 선택 >(직계) 첫번째 애들 */
+article p > :first-child{
+    width: 60%; color: #09f; background-color: transparent; 
+}
+/* article p >(직계)에서 첫째 애들 */
+article p > :first-child:not(mark){
+    text-decoration: underline;
 }
