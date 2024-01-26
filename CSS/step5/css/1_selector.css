@@ -253,14 +253,20 @@ content는 없는 곳에 무언가 강제로 넣기위해 쓰는 태그임
 괄호안에는 세워야하는 대상을 넣어주면 됨
 앞공간에다 숫자를 세는 걸 강제로 끼워넣은 것
 */
-
 .backandfrontSelector p::after{
     content: "-" attr(data-page) "page"; font-weight: bold;
     color: deeppink;
 }
 /* before 위(전위), after 아래(후위) */
 
-
+.reactionSelector > *{
+    color: #fff;
+}
+.reactionSelector > *::selection{
+    background-color: #000; color: #ff0;
+}
+/* selection 
+환경 고대비율이 깨지기 때문에 특정 취약자들이 웹을 사용하기에 불편해서 웬만하면 사용X*/
 
 
 
