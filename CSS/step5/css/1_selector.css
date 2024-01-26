@@ -210,21 +210,30 @@ child : 부모 기준으로 바라보는 순서
 >> 쓰는 경우
 안에 구조가 단순하고 반복되는 구조에서는 of-type을 쓸 일이 없음 child가 유리함 
 그러나 우리가 일반적으로 잡는 구조라고 했을 때 child가 불리히고 of-type쓰는게 훨씬 편함*/
-.shapeSelector h1:nth-of-type(2n){
+.shapeSelector h1:nth-child(6){
     color: #f06;
 }
-.shapeSelector h2:first-of-type{
+.shapeSelector h2:nth-child(2){
     color: #0c6;
 }
-.shapeSelector h3:last-of-type{
+.shapeSelector h3:last-child{
     color: #30f;
 }
 /* todo. 위 문법을 child로 바꾸서 같은 결과가 나오게 만들기 */
+/* 부모기준으로 바라보는 것, h1 태그가 없어도 짚을 순 있음 */
+.textSelector h1::first-letter{
+    font-size: 100px; color: #09f;
+}
+.textSelector p::first-line{
+    font-size: 38px; line-height: 30px; color: #090; text-decoration: underline;
+}
 
 
 
-
-/* html,css,js mdn사이트 즐겨찾기 해놓고 뭐가 나타나고 변경되는지 자주 체크하기 */
+/*
+<Tip> 
+html,css,js mdn사이트 즐겨찾기 해놓고 뭐가 나타나고 변경되는지 자주 체크하기 
+*/
 /* 
 <git 강제푸쉬>
 git push -u origin main --force 
