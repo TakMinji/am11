@@ -1,0 +1,40 @@
+div:first-of-type{
+    max-width: 960px; margin: 0 auto;
+}
+div:first-of-type fieldset{
+    border-width: 1px; border-color: #05f; padding: 15px 20px 25px; margin: 0;
+}
+div:first-of-type fieldset:not(:last-of-type){
+    margin-bottom: 25px;
+}
+div:first-of-type fieldset label{
+    display: inline-block; line-height: 20px; vertical-align: middle;
+}
+/* 
+vertical-align: middle; 
+높이가 높은 애가 주축을 잡아주는 것 살짝 틀어진 부분은 높이가 작은 애가 잡아줌 
+*/
+div:first-of-type fieldset input[type='checkbox']{
+    vertical-align: -20%;
+}
+div:first-of-type fieldset textarea{
+    display: block; width: 100%; box-sizing: border-box; padding: 10px 1%; height: 150px;
+    margin-top: 25px; border-color: #05f; resize: none;
+    transition-duration: 0.75s;
+}
+/* 
+textarea 문제점)
+width : 100%주면 원래 부모 padding의 영향을 받아야하는데 좌우 padding이 다르게 나옴
+해결방법)
+box-sizing: border-box;
+textarea는 오른쪽에 스크롤바를 갖고 태어나는데 
+스크롤이 자기가 가진 공간이 할당된 만큼 계산해야되는데 초과해서 계산해버려서 넘어가기 때문에
+border-box를 주면됨
+*/
+/* 
+resize : none 
+resize bar 자체를 없애줌
+*/
+div:first-of-type fieldset input[type='checkbox']:checked+textarea{
+    height:0px; padding: 0px 1%;
+}
