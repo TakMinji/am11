@@ -10,16 +10,16 @@ article{
     margin: 0;
 }
 article{
-    clear: both;
+    margin-bottom: 30px; clear: both;
 }
-article:not(:last-of-type){
+/* article:not(:last-of-type){
     margin-bottom: 20px;
-}
+} */
 article > :first-child{
-    width: 40%;  font-size: 100px; background-color: gray; color: white;
+    font-size: 200px; line-height: 140px; width: 40%; background-color: gray; color: white;
 }
 article:nth-of-type(2n+1) > :first-child{
-    float: right; margin: 0 0 10px 20px; 
+    float: right; margin: 0 0 10px 20px; text-align: right;
 }
 /* article에서 홀수애들 선택 >(직계)에서 첫번째 애들 */
 article:nth-of-type(2n) > :first-child{
