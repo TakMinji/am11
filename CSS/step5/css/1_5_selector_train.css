@@ -1,0 +1,38 @@
+body{
+    width: 80%; margin: 0 auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* body rap작업, 실무에서는 X */
+h1{
+    margin: 0; font-size: 30px; font-weight: normal; color: gray; padding: 15px 50% 15px 0;
+    position: relative
+}
+h1 a{
+    position: absolute; right: 0; bottom: 0; font-size: 24px; width: 50%; text-align: right;
+    color: forestgreen;
+}
+/* 
+>>h1 padding : 50%, h1 a width : 50% 준 이유)
+position으로 띄우고 화면이 작아졌을 때 겹치는 부분도 생각해야함 
+*/
+fieldset{
+    padding: 10px 40% 10px 0; position: relative; border-width: 2px 0 1px; border-style: solid none;
+    border-color: darkgreen; 
+}
+fieldset input[type='search']{
+    width: 20%; border: 1px solid forestgreen; background-color: palegreen; line-height: 24px; 
+    min-width: 115px; 
+}
+/* min-width : 일정 이상으로 줄어들지않게 막는 것  */
+fieldset input[type='submit']{
+    width: 10%; min-width: 60px; background-color: darkolivegreen; color: white;
+    border: 2px solid limegreen; line-height: 24px;
+}fieldset select{
+    position: absolute; right: 0; width: 24%; min-width: 150px; background-color: lightseagreen;
+    padding: 5px 0; border-color: lightskyblue; max-width: 250px;
+}
+/* max-width : 일정 이상으로 늘어나지않게 막는 것 
+min--width, max-width 같이쓰는 건 특이한 상황임 보통은 한개만 씀
+*/
+/* 
+select 태그는 옵션을 기준으로 잡는 애라서 line-height가 안먹음 무조건 padding을 줘야함 
+*/
