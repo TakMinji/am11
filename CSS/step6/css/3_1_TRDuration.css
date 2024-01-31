@@ -28,6 +28,14 @@ body{
 } 
 .durationEX2:active{
     padding: 30px; font-size: 16px;  line-height: 32px; width: 200px; height: 200px; 
-    
 }       
-
+.durationEX3{
+    position: relative; height: 23px; background-color: #808080; margin-bottom: 50px;
+}
+.durationEX3 .moveSpan{
+    position: absolute; width: 3%; height: 23px; background-color: #000; left: 0;
+    transition-duration: 2s;
+}
+.durationEX3:hover .moveSpan{
+    left: 97%;
+}
