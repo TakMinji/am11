@@ -1,0 +1,33 @@
+/* 
+? transition-duration >> 변환-지속시간 
+! presetValue(ex> block -> none, block -> inline-block, relative -> absolute...)는 적용불가.
+* 무조건 수치화 되어있는 값만 변경 가능.(영문으로 넣는 모든 값 변환 X)
+*/
+body{
+    margin: 0;
+}
+.durationEX1{
+    width: 100px; height: 100px; background-color: #ff0; transition-duration: 2s;
+}
+/* 
+★ transition은 쓰는 위치가 중요 ★
+왕복을 원할 때는 반드시 기본(변경을 원하는 전 상태)에 넣어줘야함 */
+.durationEX1:hover{
+    width: 200px; height: 200px; 
+}
+.durationEX1:active{
+    background-color: #f00;
+}
+/* active >> click했을 때 변환되는 것 */
+.durationEX2{
+    width: 200px; height: 200px; font-size: 16px; background-color: #ff6a00;
+    padding: 30px; line-height: 32px; transition-duration: 2s;
+}
+.durationEX2:hover{
+    padding: 10px; font-size: 12px; line-height: 18px; width: 150px; height: 150px;
+} 
+.durationEX2:active{
+    padding: 30px; font-size: 16px;  line-height: 32px; width: 200px; height: 200px; 
+    
+}       
+
