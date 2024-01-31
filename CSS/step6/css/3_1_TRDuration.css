@@ -39,3 +39,30 @@ body{
 .durationEX3:hover .moveSpan{
     left: 97%;
 }
+/* 
+Todo. durationEX4
+1. top(빨),right(주),bottom(노),left(초) border 생성
+2. :hover가 되면 box는 중앙으로 움직여야 함.
+3. 가운데로 움직였을때 top(초),right(파),bottom(남),left(보) 색상으로 border변경
+    textColor 변경
+*/
+/* ▼ 내가 푼 것 - position으로 처리해도 상관없다고 하심, 선생님은 margin으로 처리하심 */
+/* .durationEX4{
+    width: 400px; height: 200px; border: 3px solid; background-color: white;
+    border-color: #f00 orangered yellow green;  transition-duration: 2s;
+    position: relative; left: 0;
+
+}
+.durationEX4:hover{
+    border-color: greenyellow blue darkblue blueviolet; color: blue;
+    position: absolute; left: 40%;
+} */
+/* ▼ 선생님 해설 */
+.durationEX4{
+    width:50%; height:300px; transition-duration:2s;
+    border-width:3px; border-style:solid; border-color:#f00 #ff6a00 #ffd800 #4cff00; 
+}
+
+.durationEX4:hover{
+    margin:0 25%; border-color:#00ff90 #0094ff #0026ff #b200ff; color:#0094ff;
+}
