@@ -1,0 +1,79 @@
+body{
+    width: 80%; margin: 0 auto; 
+}
+ul{
+    padding: 0; list-style: none; margin-top: 35px;
+}
+ul li:first-child{
+    border-bottom: 1px solid deeppink; background-color: rgb(32, 32, 32);
+}
+ul li:last-child{
+    border-bottom: 1px solid deeppink;
+}
+ul li:nth-child(2n+1):not(:first-child){
+    background-color: gainsboro; 
+}
+ul li:nth-child(2n+3):hover{
+    background-color: darkblue;
+}
+ul li:nth-child(2n):hover{
+    background-color: darkorange;
+}
+ul li:after{
+    content: ''; display: block; clear: both;
+}
+ul li span{
+    display: block; float: left; padding: 10px 2%; box-sizing: border-box; color: rgb(145, 145, 145);
+}
+ul li:first-child span:nth-child(2){
+    color: palegreen;
+}
+ul li:not(:first-child):hover span{
+    color: paleturquoise;
+}
+ul li:not(:first-child) span:nth-child(2){
+    color: orangered;
+}
+ul li span:nth-child(2n+1){
+    width: 15%;
+}
+ul li span:nth-child(2){
+    width: 40%;
+}
+ul li span:nth-child(4){
+    width: 30%;
+}
+div{
+    position: relative; width: 50%; margin: 0 auto 15px; padding: 0 3%;
+}
+div a{
+    text-decoration: none; color: #555; display: block; text-align: center; font-size: 15px; 
+}
+div > a{
+    position: absolute; top: 0;
+}
+div > a:nth-of-type(1){
+    left: 0;
+}
+div > a:nth-of-type(2){
+    right: 0;
+}
+div ol{
+    margin: 0; padding: 0;
+}
+div ol:after{
+    content: ''; display: block; clear: both;
+}
+div ol li{
+    display: block; float: left; width: 10%;
+}
+div ol li a:hover{
+    background-color: darkorchid; color: violet; border-radius: 5px;
+}
+form fieldset{
+    border: none; text-align: center;
+}
+form fieldset input[type='submit']{
+    border: 1px solid darkorchid; background-color: lavender; color: darkorchid;
+    text-transform: uppercase;
+}
