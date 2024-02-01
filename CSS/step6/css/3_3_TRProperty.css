@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+}
+.property{
+    width: 610px; margin: 0 auto; border: 3px solid #3a00b6;
+
+}
+.property span{
+    display: block; width: 10px; height: 50px; background-color: #0cf; margin: 5px;
+    transition-property: background-color,width;
+    /* 
+    transition-property >> duration분리해서 적용하는 속성,
+     \default값은 all */
+    transition-duration: 1s, 5s;
+    /* 
+    duration은 width,height,margin 수치화된 모든 것을 관할
+    >> property에서 분리를 해주는 순간부터 위에 적힌 속성만 관할하게됨. 
+    */
+    transition-delay: 4s, 0s;
+    transition-timing-function: ease-out, ease-in;
+}
+.property:hover span:nth-child(1){background-color: #f00; width: 200px;}
+.property:hover span:nth-child(2){background-color: #f50; width: 300px;}
+.property:hover span:nth-child(3){background-color: #0fa; width: 400px;}
+.property:hover span:nth-child(4){background-color: #bb0; width: 500px;}
+.property:hover span:nth-child(5){background-color: #c0c; width: 600px;}
