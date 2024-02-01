@@ -18,6 +18,8 @@ body{
     */
     transition-delay: 4s, 0s;
     transition-timing-function: ease-out, ease-in;
+    transition: all .35s ease-out 2s; 
+    /* ? transition shortHand 순서 : property duration timingfuction delay */
 }
 .property:hover span:nth-child(1){background-color: #f00; width: 200px;}
 .property:hover span:nth-child(2){background-color: #f50; width: 300px;}
