@@ -5,13 +5,16 @@ ul{
     padding: 0; list-style: none; margin-top: 35px;
 }
 ul li:first-child{
-    border-bottom: 1px solid deeppink; background-color: rgb(32, 32, 32);
+    border-bottom: 2px solid deeppink; background-color: rgb(32, 32, 32);
 }
 ul li:last-child{
-    border-bottom: 1px solid deeppink;
+    border-bottom: 2px solid deeppink;
 }
 ul li:nth-child(2n+1):not(:first-child){
-    background-color: gainsboro; 
+    background-color: #e9e9e9; 
+}
+ul li:nth-child(2n){
+    background-color: #fafafa;
 }
 ul li:nth-child(2n+3):hover{
     background-color: darkblue;
@@ -23,16 +26,19 @@ ul li:after{
     content: ''; display: block; clear: both;
 }
 ul li span{
-    display: block; float: left; padding: 10px 2%; box-sizing: border-box; color: rgb(145, 145, 145);
-}
-ul li:first-child span:nth-child(2){
-    color: palegreen;
+    display: block; float: left; padding: 15px 2%; box-sizing: border-box; color: #999;
 }
 ul li:not(:first-child):hover span{
     color: paleturquoise;
 }
+ul li:first-child span:nth-child(2){
+    color: palegreen;
+}
 ul li:not(:first-child) span:nth-child(2){
     color: orangered;
+}
+ul li:not(:first-child,:nth-child(2n+1)):hover span:nth-child(2){
+    color: white;
 }
 ul li span:nth-child(2n+1){
     width: 15%;
@@ -45,12 +51,15 @@ ul li span:nth-child(4){
 }
 div{
     position: relative; width: 50%; margin: 0 auto 15px; padding: 0 3%;
+    /* padding 넣는 이유 : a와 안만나게 하기 위함 */
 }
 div a{
     text-decoration: none; color: #555; display: block; text-align: center; font-size: 15px; 
+    line-height: 23px;
+    /* a에 top:0을 쓸거면 line-height(높이)를 동기화 */
 }
 div > a{
-    position: absolute; top: 0;
+    position: absolute; width: 3%; top: 0;
 }
 div > a:nth-of-type(1){
     left: 0;
@@ -65,13 +74,22 @@ div ol:after{
     content: ''; display: block; clear: both;
 }
 div ol li{
-    display: block; float: left; width: 10%;
+    display: block; float: left; width: 9%;
+}
+/* 
+    ? width : calc(10% - 4px) 
+*/
+div ol li:not(:first-child){
+    margin-left: 1.11%;
+    /* 
+    1.11% * first-child 제외한 9개 = 99.99% 
+    */
 }
 div ol li a:hover{
     background-color: darkorchid; color: violet; border-radius: 5px;
 }
 form fieldset{
-    border: none; text-align: center;
+    border: none; padding: 0; margin: 0; text-align: center;
 }
 form fieldset input[type='submit']{
     border: 1px solid darkorchid; background-color: lavender; color: darkorchid;
