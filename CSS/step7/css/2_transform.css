@@ -1,0 +1,32 @@
+div{
+    width: 200px; height: 200px; border: 5px solid black; margin: 0 auto; 
+}
+div span{
+    width: 200px; height: 200px; display: block;
+    transform-origin: left top;
+    /* transform-origin >> 조실점을 바꾸는 것 */
+}
+div:first-of-type span{
+    background-color: red; transform: rotate(10deg);
+}
+div:nth-of-type(2) span{
+    background-color: green; color: #fff; transform: translateX(100px) rotate(10deg) ; 
+    /* transform 우선순위 중요 >> 컴퓨터는 한번에 여러가지 명령을 수행할 수 없기떄문에 순서에 따라 결과가 달라짐 */
+    /* translate >> 이동 */
+}
+div:nth-of-type(3) span{
+    background-color: blue; color: #fff; transform: rotate(10deg) translate(100px,50px);
+    /* tranlate로 줄여쓸 수 있음 */
+}
+div:nth-of-type(4) span{
+    background-color: brown; transform: rotate(10deg) translate(100px,50px) skew(10deg,0deg);
+}
+div:nth-of-type(5) span{
+    background-color: orange; transform: rotate(10deg) translate(100px,50px) skew(10deg,10deg);
+}
+    /* skew>> 기울기 */
+div:nth-of-type(6) span{
+    background-color: pink; transform: rotate(10deg) translate(100px,50px) skew(10deg,10deg) scale(1.2);
+    /* scale>> 확대와 축소, %(퍼센트)사용, 1이 현재 원상태임/ x와 y가 나눠져있어도 따로쓰는 경우는 거의 X */
+}
+/* ★ transform을 쓸 때 rotate, translate, scale은 자주 사용함 잘 기억해두기!!*/
