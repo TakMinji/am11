@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+}
+.circle{
+    position: absolute; width: 200px; height: 200px; border-radius: 100px; 
+    background: linear-gradient(to bottom, #7bd9f8 0%, #1e5799 100%);
+    animation-name: moveCircle; 
+    /* animation-name : 애니메이션 이름 지정 */
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    /* animation-iteration-count: >> 재생횟수 */
+    /* 재생횟수에 무한을 걸어주면 무한 왕복하게됨 >> infinite */
+    animation-direction: alternate;
+    /* animation-direction : alternate >> 애니메이면 왕복 */
+    animation-timing-function:  cubic-bezier(.18,.47,.48,.84);/*todo. cubic-bezier site에서 적당한 가속도값 찾아 넣기*/
+    /* animation-timing-function : 가속도 transition이랑 속성같음 앞글자만 바꿔주면됨 */
+}
+@keyframes moveCircle{
+    /* 
+    keyframes : 사용자가 지정하는 위치  
+    ex) 원 시작했을 때 keyframes, 원 도착하는 keyframes 지정해주면 애니메이션 완성
+    0% 선언하면 시작하는 keyframes가 하나 생긴 것.
+    도착하는 위치에는 시작이 0이니까 100% 선언 >> 도착 위치에는 이동하고싶은 거리 입력*/
+    0%{
+        left: 0; transform: rotate(0deg);
+    }100%{
+        left: 800px; transform: rotate(360deg);
+    }
+    /* transform : 각도 */
+}
+/* 
+    ▲ 왔다갔다 왕복시키려면 100%보다 하수인 50% left 선언해주고 100%에 0을 찍어주면 돌아옴
+    왕복시에 4s를 주면 2초 갔다가 2초만에 돌아오는 것
+
+*/
+.circle:hover{
+    animation-play-state: paused;
+}
+/*  animation-play-state: running>>default값 / paused>>정지;*/
+
+
