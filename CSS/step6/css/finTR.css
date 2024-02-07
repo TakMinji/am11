@@ -1,0 +1,58 @@
+body{
+    width: 90%; height: 100%; margin: 0 auto;
+}
+aside{
+    height: 80%; float: left; padding-top: 20%; 
+}
+p{
+    font-size: 12px; 
+}
+aside:first-of-type{
+    width: 50%;
+}
+aside:first-of-type footer{
+    color: #333dff; font-weight: bold;
+}
+aside:last-of-type{
+    width: 45%; padding-left: 5%; 
+}
+aside:last-of-type strong{
+    display: block;
+}
+aside:last-of-type ul{
+    margin: 0; padding: 0;
+}
+aside:last-of-type ul li{
+    display: block; text-align: right; overflow: hidden; padding: 10px 5%;
+    transition-duration: 1s; 
+}
+aside:last-of-type ul li:nth-child(1){background-color: #ff3838;}
+aside:last-of-type ul li:nth-child(2){background-color: #ff693b;}
+aside:last-of-type ul li:nth-child(3){background-color: #ffcf33;}
+aside:last-of-type ul li:nth-child(4){background-color: #00a713;}
+aside:last-of-type ul li:nth-child(5){background-color: #3377ff;}
+aside:last-of-type ul li:nth-child(6){background-color: #333dff;}
+aside:last-of-type ul li:nth-child(7){background-color: #3826ff;}
+aside:last-of-type ul li:hover{
+    cursor: pointer;
+}
+aside:last-of-type ul li p{
+    width: 80%; float: left; height: 0px; opacity: 0;
+    transition-property: height, opacity;
+    transition-duration: 2s;
+}
+aside:last-of-type ul li:hover p{
+    height: 200px; opacity: 1;
+}
+aside:last-of-type ul li a{
+    color: white; font-size: 12px;
+}
+aside:last-of-type ul li a:before{
+    content: '+';
+}
+aside:last-of-type ul li:hover a{
+    color: black; 
+}
+aside:last-of-type ul li:hover a:before{
+    content: '>';
+}
