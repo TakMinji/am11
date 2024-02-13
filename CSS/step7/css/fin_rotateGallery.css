@@ -24,7 +24,12 @@ section .moveMent{
 }
 section .moveMent .pic{
     position: absolute; left: 0; top: 0; opacity: 0.5; backface-visibility: hidden;
+    margin-left: -107px;
+    /* img의 width 215/2 = 107.5이지만 소수점은 처리가 안되기때문에 107로 처리(따라서 오차로 미세한 진동 발생)
+    실제 상황이면 img 사이즈 조정해서 width를 짝수인 214px로 만들어야함 */
+    /* padding, margin에서 마이너스 쓰는건 원래 비표준임 (원래는 js에서 해결해야하는데 간편하게 margin으로 가끔 조정하기 위해 씀. padding은 X) */
 }
+
 
 section .moveMent .pic:nth-child(1){transform: rotateY(0deg) translateZ(-370px);}
 section .moveMent .pic:nth-child(2){transform: rotateY(36deg) translateZ(-370px);}
