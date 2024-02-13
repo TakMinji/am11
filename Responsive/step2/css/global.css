@@ -1,0 +1,51 @@
+/* <미디어쿼리 문법> */
+
+@media screen and (max-width:767px){
+    body{
+        font-family: 'Noto Sans KR'; background-color: lightgreen; color: brown;
+    }
+    h1{
+        font-size: 18px; line-height: 24px;
+    }
+    p{
+        font-size: 12px; text-align: center; line-height: 18px;
+    }
+}
+/* ? mobile device - 사용자 해상도가 768미만일 때 실행되는 code. */
+
+@media screen and (min-width:768px) and (max-width: 1279px){
+    body{
+        font-family: 'Roboto'; background-color: lightseagreen; color: darkblue;
+    }
+    h1{
+            font-size: 24px; line-height: 30px;
+    }
+    p{
+            font-size: 14px; text-align: left; line-height: 20px;
+    }
+}
+/* ? tablet device - 사용자 해상도가 768이상일 때 1280미만일 때 실행되는 code. */
+/* and 무한으로 사용가능 */
+
+@media screen and (min-width:1280px){
+/* min-width) 1280px 이하부터는 css가 적용이 안되는 상황으로 영역을 정해준 것 */
+    body{
+        font-family: 'Noto Sans KR'; background-color: blue; color: white;
+    }
+    h1{
+        font-size: 32px; line-height: 48px;
+    }
+    p{
+        font-size: 16px; text-align: right; line-height: 22px;
+    }
+}
+/* ? desktop device - 사용자 해상도가 1280이상일 때 실행되는 code. */
+
+/* 
+< 반응형 기기에서 확인방법 >
+1) window + R
+2) cmd 입력
+3) ipv4주소에서 세번째. 네번째 자릿수 + 웹주소에서 :5500~ 
+*/
+
+/* 반응형 Tip) 작은화면을 가장 먼저 확인하는 것, 작은 화면에서 잘 나오면 큰 화면에서도 잘나옴 */
