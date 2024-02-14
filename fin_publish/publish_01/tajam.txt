@@ -1,0 +1,27 @@
+구조화 전에 import.css 만들기(reset, global, page)
+psd 시안에서 사용한 web font 확인(원래는 디자이너가 알려줘야함)
+google font 홈페이지 가서 font 검색 후 다운로드(@import 방식 코드 복사해서 import.css파일 맨 위에 붙여넣기, 세미콜론; 붙이기)
+★맨 위에 붙인 이유 폰트가 뒤에 가게되면 로딩이 뒤늦게 걸릴 수 있기때문에 웹폰트는 항상 맨위에
+
+reset>global>page 순서대로 잘 기재하기
+큰 범위대로 나열한 것임 
+
+Roboto: 
+black, Regulat, Light
+
+Playfair Display: 
+black, Bold, Regular
+
+Hammersmith One:
+Regular
+
+구조를 바라볼땐 가장 큰 것부터 작은 것들을 기준으로 바라보기(피라미드 형태)
+
+global.css에서 desktop먼저 작업.
+
+header h1과 ul 나누기)
+float : 전체적으로 균일하게 나눠야할 때 사용함
+여기서 float 사용하게 되면 코드가 늘어짐 
+좌우로 나눌 때는 position이 가장 빠른 방법임 
+
+똑같은 코드 겹치는건 코드 편하게 다 치고 중복코드 묶어줘도됨

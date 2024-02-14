@@ -1,0 +1,47 @@
+a{
+    text-decoration: none;
+}
+header > div nav ul li a{
+    font-family: "Roboto"; 
+}
+
+@media screen and (min-width:1280px) {
+    header{
+        background: url('../images/bg_01.png') left top / cover no-repeat; padding: 15px 0 70px;
+    }
+    header > div{
+        max-width: 940px; margin: 0 auto; position: relative;
+    }
+    header > div h1{
+        max-width: 128px; 
+    }
+    header > div h1 a{
+        display: block; 
+    }
+    header > div h1 a img{
+        width: 100%; display: block;
+    }
+    header > div nav{
+        position: absolute; right: 0; top: 0; width: 100%; padding-left: 130px; 
+        box-sizing: border-box; text-align: right;
+    }
+    /* width : 100%에 padding주면 뚱뚱해지기 때문에 box-sizing을 넣어줘야 img랑 안겹침 */
+    header > div nav ul li{
+        display: inline-block; 
+    }
+    header > div nav ul li:not(:first-child){
+        margin-left: 2.65%;  
+    }
+    /* margin-left 계산 : 네이버 퍼센트계산기 통해서 940px의 25px은 몇 %? 2.65% 나옴 */
+    header > div nav ul li a{
+        line-height: 50px; display: block; font-size:13px; color: #fff; 
+        font-weight: 900; 
+    }
+    /* line-height 50px은 img 높이 재서 준 것 */
+    header > div nav ul li a:hover{
+        color: aqua;
+    }
+
+    /* float : 전체적으로 균일하게 나눠야할 때 사용함 .여기서 float 사용하게 되면 코드가 늘어짐. 좌우로 나눌 때는 position이 가장 빠른 방법임 */
+}
+/* ? desktop */

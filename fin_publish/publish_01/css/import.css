@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@300;400;900&display=swap');
+/* ? webfont LOAD */
+@import url('reset.css');
+@import url('global.css');
+/* ? globalElement (header,footer,popup...) : 모든 페이지가 같이 사용하는 영역 */
+@import url('page.css');
+/* ? pageElement (section,div,article...) : 개별 페이지의 css가 모이는 영역 */
+/* ! global, page css는 단 하나. page 수백장이던 수천장이던 모두다 page.css안에 기술되어야함. */
+
+
+/* 
+구조화 전에 import.css 만들기(reset, global, page)
+psd 시안에서 사용한 web font 확인(원래는 디자이너가 알려줘야함)
+google font 홈페이지 가서 font 검색 후 다운로드(@import 방식 코드 복사해서 import.css파일 맨 위에 붙여넣기, 세미콜론; 붙이기)
+▲맨 위에 붙인 이유 폰트가 뒤에 가게되면 로딩이 뒤늦게 걸릴 수 있기때문에 웹폰트는 항상 맨위에
+
+★reset>global>page 순서대로 잘 기재하기 > 큰 범위대로 나열한 것임 
+ */
