@@ -13,15 +13,26 @@
 }
 /* ? mobile device - 사용자 해상도가 768미만일 때 실행되는 code. */
 
-@media screen and (min-width:768px) and (max-width: 1279px){
+@media screen and (min-width:768px) and (max-width: 1279px) and (orientation:landscape){
     body{
         font-family: 'Roboto'; background-color: lightseagreen; color: darkblue;
     }
     h1{
-            font-size: 24px; line-height: 30px;
+            font-size: 24px; line-height: 30px; text-align: right;
     }
     p{
-            font-size: 14px; text-align: left; line-height: 20px;
+            font-size: 14px; text-align: right; line-height: 20px;
+    }
+}
+@media screen and (min-width:768px) and (max-width: 1279px) and (orientation:portrait){
+    body{
+        font-family: 'Roboto'; background-color: lightsalmon; color: saddlebrown;
+    }
+    h1{
+            font-size: 24px; line-height: 30px; text-align: center;
+    }
+    p{
+            font-size: 14px; text-align: center; line-height: 20px;
     }
 }
 /* ? tablet device - 사용자 해상도가 768이상일 때 1280미만일 때 실행되는 code. */
@@ -44,7 +55,7 @@
 /* 
 < 반응형 기기에서 확인방법 >
 1) window + R
-2) cmd 입력
+2) cmd 입력 >> inconfig입력(스마트폰 학원 와이파이 붙어있는지 확인)
 3) ipv4주소에서 세번째. 네번째 자릿수 + 웹주소에서 :5500~ 
 */
 
