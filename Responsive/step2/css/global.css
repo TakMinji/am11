@@ -1,11 +1,25 @@
 /* <미디어쿼리 문법> */
-
-@media screen and (max-width:767px){
+    /* 
+    (orientation:landscape) >> 가로로 회전하였을 때 
+    (orientation:portrait) >> 정방향일 때
+    */
+@media screen and (max-width:860px) and (orientation:landscape){
     body{
         font-family: 'Noto Sans KR'; background-color: lightgreen; color: brown;
     }
     h1{
-        font-size: 18px; line-height: 24px;
+        font-size: 22px; line-height: 28px; text-align: right;
+    }
+    p{
+        font-size: 12px; text-align: right; line-height: 20px;
+    }
+}
+@media screen and (max-width:860px) and (orientation:portrait){
+    body{
+        font-family: 'Noto Sans KR'; background-color: darkblue; color: white;
+    }
+    h1{
+        font-size: 18px; line-height: 24px; text-align: center;
     }
     p{
         font-size: 12px; text-align: center; line-height: 18px;
@@ -13,7 +27,7 @@
 }
 /* ? mobile device - 사용자 해상도가 768미만일 때 실행되는 code. */
 
-@media screen and (min-width:768px) and (max-width: 1279px) and (orientation:landscape){
+@media screen and (min-width:861px) and (max-width: 1279px) and (orientation:landscape){
     body{
         font-family: 'Roboto'; background-color: lightseagreen; color: darkblue;
     }
@@ -24,7 +38,7 @@
             font-size: 14px; text-align: right; line-height: 20px;
     }
 }
-@media screen and (min-width:768px) and (max-width: 1279px) and (orientation:portrait){
+@media screen and (min-width:861px) and (max-width: 1279px) and (orientation:portrait){
     body{
         font-family: 'Roboto'; background-color: lightsalmon; color: saddlebrown;
     }
