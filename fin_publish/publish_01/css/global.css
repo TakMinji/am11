@@ -2,7 +2,8 @@ a{
     text-decoration: none;
 }
 header > div nav ul li a,
-header > div > ul li p,{
+header > div > ul li p,
+footer *{
     font-family: "Roboto"; 
 }
 header > div > ul li h2{
@@ -14,6 +15,10 @@ header > div > ul li h2{
 }
 /* ? A/U */
 @media screen and (min-width:1280px) {
+
+    footer > div{
+        max-width: 940px; margin: 0 auto; padding: 70px 0;
+    }
 
     .btn_more{
         padding: 10px 0.6%; box-sizing: border-box; 
@@ -98,7 +103,52 @@ header > div > ul li h2{
     footer{
         background: url('../images/bg_05.png') left top / cover no-repeat;
     }
-    
+    footer > div div:not(:last-of-type){
+        float: left; width: 32%; margin: 0 0 70px 2%;
+    }
+    footer > div div:first-of-type{
+        margin-left: 0;
+    }
+    /* 맨 왼쪽 애는 margin-left 취소해준 것 */
+    footer > div div h2{
+        margin-bottom: 20px; 
+    }
+    footer > div div:not(:first-of-type) h2{
+        line-height: 50px; font-size: 15px; font-weight: 900; color: white; 
+    }
+    /* tajam logo 높이 50px을 h2 line-height(줄간격)으로 넣어줘서 정렬한 것 */
+    footer > div div:not(:nth-of-type(3)){
+        font-size: 14px; line-height: 26px; color: white;
+    }
+    /* 1,2번 애들은 14px light 똑같으나 3번 애는 달라서 >> 1,2,4 동일적용 */
+    footer > div div:not(:nth-of-type(3)) a{
+        color: white;
+    }
+    footer > div div:nth-of-type(1),
+    footer > div div:nth-of-type(2){
+        font-weight: 300;
+    }
+    footer > div div:nth-of-type(2) address{
+        font-style: normal;
+    }
+    /* 이탤릭 폰트 해제 */
+    footer > div div:nth-of-type(2) address span{
+        display: block; padding-left: 30px; background-repeat: no-repeat; background-position: left 5px;
+
+    }
+    footer > div div:nth-of-type(2) address span:nth-of-type(1){
+        background-image: url('../images/bul_map.png'); margin-bottom: 10px;
+    }
+    footer > div div:nth-of-type(2) address span:nth-of-type(2){
+        background-image: url('../images/bul_phone.png');
+    }
+    footer > div div:last-of-type{
+        clear: both;
+    }
+    /*
+    마지막 div가 끌려올라가는 현상 해결) 
+    평소 쓰는 after cancle X,
+    마지막이 없을 때 after 캔슬러 쓰는것 , 마지막 div에게 clear만 던지면됨 */
 }
 /* ? desktop */
 /* ★ header > footer > main page 순서로 보통 작업 */
