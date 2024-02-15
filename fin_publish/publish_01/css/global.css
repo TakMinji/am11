@@ -1,11 +1,25 @@
 a{
     text-decoration: none;
 }
-header > div nav ul li a{
+header > div nav ul li a,
+header > div > ul li p,{
     font-family: "Roboto"; 
 }
-
+header > div > ul li h2{
+    font-family: 'Playfair Display';
+}
+.btn_more{
+    font-family: 'Hammersmith One'; font-weight: 400; text-align: center; display: block;
+    font-size: 16px; border: 1px solid #00e0d0; color: #00e0d0; 
+}
+/* ? A/U */
 @media screen and (min-width:1280px) {
+
+    .btn_more{
+        padding: 10px 0.6%; box-sizing: border-box; 
+    }
+/* desktop엔 괜찮아보여도 tablet, mobile에 어떻게 나올지 모르기때문에 확실한 것만 A/U에 넣어놓고 
+불확실한 것들은 밑에다 정리해놓기 >> 이게 모듈의 정확한 방법 */
     header{
         background: url('../images/bg_01.png') left top / cover no-repeat; padding: 15px 0 70px;
     }
@@ -26,6 +40,7 @@ header > div nav ul li a{
         box-sizing: border-box; text-align: right;
     }
     /* width : 100%에 padding주면 뚱뚱해지기 때문에 box-sizing을 넣어줘야 img랑 안겹침 */
+    /* float : 전체적으로 균일하게 나눠야할 때 사용함 .여기서 float 사용하게 되면 코드가 늘어짐. 좌우로 나눌 때는 position이 가장 빠른 방법임 */
     header > div nav ul li{
         display: inline-block; 
     }
@@ -38,10 +53,52 @@ header > div nav ul li a{
         font-weight: 900; 
     }
     /* line-height 50px은 img 높이 재서 준 것 */
+    header > div nav ul li a.active,
     header > div nav ul li a:hover{
-        color: aqua;
+        color: #00e0d0;
     }
-
-    /* float : 전체적으로 균일하게 나눠야할 때 사용함 .여기서 float 사용하게 되면 코드가 늘어짐. 좌우로 나눌 때는 position이 가장 빠른 방법임 */
+/* header GNB Fin */
+    header > div > ul{
+        margin-bottom: 125px;
+    }
+    header > div > ul li{
+        padding-top: 165px; display: block;
+    }
+    header > div > ul li h2{
+        font-size: 32px; color: white; font-weight: 900; text-align: center;
+        padding-bottom: 22px; background: url('../images/border.png') no-repeat center bottom; margin-bottom: 30px;
+    }
+    header > div > ul li p{
+        font-size: 14px; color: white; font-weight: 300; line-height: 24px; text-align: center;
+        max-width: 775px; margin: 0 auto 50px;
+    }
+    /* 
+    ★Tip)
+    font마다 자동으로 규정되는 line-height가 있음 예를들어 margin 30 폰트를 밀어야한다면 5px을 깐 25px을 부여해줌 
+    >> 우리가 생각하는 수치보다 line-height가 포함되어 더 들어가기때문에 */
+    header > div > ul li a.btn_more{
+        max-width: 120px; margin: 0 auto;
+    }
+    header > div > ol{
+        text-align: center;
+    }
+    header > div > ol li{
+        display: inline-block;
+    }
+    header > div > ol li a{
+        text-indent: -9999px; display: block; width: 8px; height: 8px; border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.8); 
+    }
+    header > div > ol li a.active,
+    header > div > ol li a:hover{
+        background-color: #00e0d0; border-color: none;
+    }
+    /* border를 none하면 2px이 사라져서 모양이 이상해지기 때문에 color를 건드려야함 */
+/* header Fin */
+    footer{
+        background: url('../images/bg_05.png') left top / cover no-repeat;
+    }
+    
 }
 /* ? desktop */
+/* ★ header > footer > main page 순서로 보통 작업 */
