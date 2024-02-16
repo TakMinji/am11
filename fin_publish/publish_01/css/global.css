@@ -187,12 +187,23 @@ header > div > ul li h2{
     footer > div div:nth-of-type(3) ul li:nth-child(6) a{background-image: url('../images/ico_sns_06.png');}
 
     footer > div div:last-of-type{
-        clear: both;
+        clear: both; font-weight: 400;
     }
     /*
     마지막 div가 끌려올라가는 현상 해결) 
     평소 쓰는 after cancle X,
     마지막이 없을 때 after 캔슬러 쓰는것 , 마지막 div에게 clear만 던지면됨 */
+    footer > div div:last-of-type a{
+        display: inline-block;
+    }
+    footer > div div:last-of-type a:not(:first-of-type){
+        margin-left: ;
+    }
+    footer > div div:last-of-type p{
+        float: right;
+    }
+    /* 다 끝나고 남은거 하나 자투리 보낼 때 float:right 쓰는 경우임 그 외는 left */
+/* footer Fin */
 }
 /* ? desktop */
 /* ★ header > footer > main page 순서로 보통 작업 */
