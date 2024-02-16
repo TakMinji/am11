@@ -4,21 +4,33 @@ a{
 header > div nav ul li a,
 header > div > ul li p,
 #about figcaption p,
-section.videoArea h2
+section.videoArea h2,
+section.expArea ul,
 footer *{
     font-family: "Roboto"; 
 }
 header > div > ul li h2,
-#about figcaption h2{
+#about figcaption h2,
+section.expArea > *:not(ul){
     font-family: 'Playfair Display';
 }
 .btn_more{
     font-family: 'Hammersmith One'; font-weight: 400; text-align: center; display: block;
     font-size: 16px; border: 1px solid #00e0d0; color: #00e0d0; 
 }
+section[class$='Area'] > hr{
+    width: 3%; min-width: 50px; border-width: 2px 0 0; border-style: solid; margin: 0 auto 45px;
+}
+/* 
+처음부터 구조상으로 미리 약속하는 모듈방식
+class가 Area로 끝나는 직계 hr 
+데스크탑에서는 width가 3%가 맞지만 다른 기기에서는 최소 50px까지만 줄어들게
+*/
+
 /* ? A/U */
 @media screen and (min-width:1280px) {
     #about,
+    section.expArea,
     footer > div{
         max-width: 940px; margin: 0 auto; padding: 70px 0;
     }
