@@ -139,6 +139,59 @@
         max-width: 140px; margin: 0 auto;
     }
 /*  ? teamArea Fin */
+    
+    section.worksArea{
+        padding: 70px 0;
+    }
+    section.worksArea h2{
+        font-size: 22px; font-weight: 700; color: #413d4b; margin: 0 auto 70px;
+        max-width: 940px; position: relative;
+    }
+    section.worksArea h2 a{
+        font-size: 14px; font-weight: 300; color: #413d4b; 
+        position: absolute; right: 0; top: 8px;
+        /* top: 0; >> 오답!
+        선생님 방법 >> h2와 h2>a의 font-size 차이를 top 좌표에 넣어주면 알맞게 정렬됨*/ 
+    }
+    /* section.worksArea h2 a:after{
+        content: '>'; margin-left: 10px; font-size: 14px; color: #413d4b; 
+    } */
+    section.worksArea ul{
+        margin-bottom: 70px; list-style: none;
+    }
+    section.worksArea ul:after{
+        content: ''; display: block; clear: both;
+    }
+    section.worksArea ul li{
+        float: left; width: 16.66%; line-height: 0;
+    }
+    /* 6개 정렬하기 위함 : 100/6 하면 됨 */
+    section.worksArea ul li a{
+        display: block; 
+    }
+    section.worksArea ul li a img{
+        width: 100%; 
+    }
+    section.worksArea a.btn_more{
+        max-width: 140px; margin: 0 auto;
+    }
+/* ? worksAre Todo Fin */
+
+    section.peoplesayArea{
+        background: url('../images/bg_04.png') center top / cover no-repeat;
+        padding: 70px 0;
+    }
+    section.peoplesayArea h2{
+        display: none; 
+    }
+    section.peoplesayArea p{
+        font-size: 16px; color: #ffffff; max-width: 770px; margin: 0 auto;
+        text-align: center; line-height: 26px; 
+
+    }
+    section.peoplesayArea p strong{
+        margin-top: 60px; display: block; 
+    }
 
 
 }

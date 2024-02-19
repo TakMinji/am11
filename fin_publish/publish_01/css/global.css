@@ -8,6 +8,9 @@ section.videoArea h2,
 section.expArea ul,
 section.teamArea ul,
 section.teamArea ul+p,
+section.worksArea h2 a,
+section.peoplesayArea p strong,
+section.peoplesayArea p span,
 footer *{
     font-family: "Roboto"; 
 }
@@ -15,7 +18,9 @@ header > div > ul li h2,
 #about figcaption h2,
 section.expArea > *:not(ul),
 section.teamArea h2,
-section.teamArea h2+p{
+section.teamArea h2+p,
+section.worksArea h2,
+section.peoplesayArea p{
     font-family: 'Playfair Display';
 }
 .btn_more{
