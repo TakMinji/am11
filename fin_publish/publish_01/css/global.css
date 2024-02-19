@@ -9,8 +9,7 @@ section.expArea ul,
 section.teamArea ul,
 section.teamArea ul+p,
 section.worksArea h2 a,
-section.peoplesayArea p strong,
-section.peoplesayArea p span,
+section.talkArea p > *,
 footer *{
     font-family: "Roboto"; 
 }
@@ -20,7 +19,7 @@ section.expArea > *:not(ul),
 section.teamArea h2,
 section.teamArea h2+p,
 section.worksArea h2,
-section.peoplesayArea p{
+section.talkArea p{
     font-family: 'Playfair Display';
 }
 .btn_more{
