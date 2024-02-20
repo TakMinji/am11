@@ -10,6 +10,7 @@ section.teamArea ul,
 section.teamArea ul+p,
 section.worksArea h2 a,
 section.talkArea p > *,
+section.contactArea form fieldset > *:not([type='submit'],legend),
 footer *{
     font-family: "Roboto"; 
 }
@@ -19,7 +20,9 @@ section.expArea > *:not(ul),
 section.teamArea h2,
 section.teamArea h2+p,
 section.worksArea h2,
-section.talkArea p{
+section.talkArea p,
+section.contactArea form fieldset legend,
+section.contactArea div h3{
     font-family: 'Playfair Display';
 }
 .btn_more{
@@ -39,6 +42,7 @@ class가 Area로 끝나는 직계 hr
 @media screen and (min-width:1280px) {
     #about,
     section.expArea,
+    section.contactArea,
     footer > div{
         max-width: 940px; margin: 0 auto; padding: 70px 0;
     }
