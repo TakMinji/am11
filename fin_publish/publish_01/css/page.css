@@ -296,7 +296,7 @@
     section.contactArea div ul li a:nth-child(2n+1) a{
         text-align: left;
     }
-    section.contactArea div ul li a:nth-child(2n+1) a{
+    section.contactArea div ul li a:nth-child(2n) a{
         text-align: right;
     }  
     section.contactArea div ul li a img{
