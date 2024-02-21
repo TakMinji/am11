@@ -1,16 +1,16 @@
 
 @media screen and (min-width: 728px) and (max-width: 1279px) {
     #about{
-        padding-left: 7%;
+        padding-left: 3.5%; box-sizing: border-box;
     }
     #about:after{
         content: ''; display: block; clear: both;
     }
     #about img{
-        float: left; display: block; width: 25%; max-width: 235px;
+        float: left; display: block; width: 32%; max-width: 235px;
     }
     #about figcaption{
-        float: left; margin-left: 10%; width: 65%;
+        float: left; margin-left: 8%; width: 60%;
     }
     #about figcaption > *:not(a){
         margin-bottom: 20px;
@@ -59,6 +59,7 @@
     section.expArea ul li{
         display: block; float: left; width: 33.33%; padding: 120px 3.5% 40px; box-sizing: border-box;
         background-repeat: no-repeat; background-position: center 30px;
+        /* min-height: 300px; */
     }
     section.expArea ul li:not(:nth-child(n):nth-child(-n+3)){
         border-top: 1px solid rgba(0, 0, 0, 0.2); 
@@ -81,10 +82,12 @@
     /* html에서 img태그 안쓰고 띄우는 방법 */
     
     section.expArea ul li h3{
-        font-size: 14px; color: #413d4b; font-weight: 900; margin-bottom: 20px;
+        font-size: 12px /*14px or 1.6vw*/; color: #413d4b; font-weight: 900; margin-bottom: 20px;
     }
+    /* ? vw : viewport width의 약자 / vh : viewport height의 약자 */
+    /* 다른 모든 단위도(margin,padding,width 등) vw로 통일시켜야함.(함께 줄어들고 늘어나기 위해) */
     section.expArea ul li p{
-        font-size: 14px; color: rgba(51, 52, 51, 0.75); font-weight: 300; line-height: 22px;
+        font-size: 12px /*14px*/; color: rgba(51, 52, 51, 0.75); font-weight: 300; line-height: 22px;
     }
 /* ? expArea Fin */
     section.teamArea{
@@ -104,7 +107,7 @@
         border-color: rgba(255, 255, 255, 0.2); max-width: 50px;
     }
     section.teamArea ul{
-        max-width: 940px; margin: 0 auto 65px;
+        max-width: 728px; margin: 0 auto 65px;
     }
     section.teamArea ul:after{
         content: ''; display: block; clear: both;
@@ -118,7 +121,7 @@
     /* ul li width : 23.5% *4개 = 96% / 남은 4%를 2프로씩 분배 */
     section.teamArea ul li figure{
         background: url('https://via.placeholder.com/220x230') center top / contain no-repeat;
-        padding-top: 230px;
+        padding-top: 180px;
     }
     /* 선생님은 img 쓸 일 없으면 figure태그 안쓰심 */
     /* contain x축이나 y축(높이나 너비)중에 경계선에 먼저 닿는 곳을 기준으로 비율을 잡음 */
@@ -144,7 +147,7 @@
     }
     section.worksArea h2{
         font-size: 22px; font-weight: 700; color: #413d4b; margin: 0 auto 70px;
-        max-width: 940px; position: relative;
+        max-width: 728px; position: relative;
     }
     section.worksArea h2 a{
         font-size: 14px; font-weight: 300; color: #413d4b; 
@@ -183,7 +186,7 @@
         display: none; 
     }
     section.talkArea p{
-        max-width: 770px; margin: 0 auto 45px; color: #ffffff; padding-top: 70px;
+        max-width: 728px; margin: 0 auto 45px; color: #ffffff; padding-top: 70px;
         background: url('../images/quote.png') no-repeat center top;
         font-size: 16px; font-weight:400; line-height: 26px; text-align: center;
     }
@@ -197,7 +200,7 @@
         font-size: 13px; font-weight: 300; color: rgba(255, 255, 255, 0.7);
     }
     section.talkArea div{
-        max-width: 940px; margin: 0 auto; text-align: center;
+        max-width: 728px; margin: 0 auto; text-align: center;
     }
     section.talkArea div > *{
         display: inline-block; vertical-align: middle;
@@ -206,7 +209,7 @@
         font-size: 30px; color: #9f9f9f;
     }
     section.talkArea div ul{
-        max-width: 305px; width: 33%;
+        max-width: 305px; width: 45%;
     }
     section.talkArea div ul li{
         float: left; display: block; width: 19%;
