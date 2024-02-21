@@ -248,7 +248,7 @@ class가 Area로 끝나는 직계 hr
         display: inline-block;
     }
     footer > div div:last-of-type a:not(:first-of-type){
-        margin-left: 30px;
+        margin-left: 5%;
     }
 /* footer Fin */
 
