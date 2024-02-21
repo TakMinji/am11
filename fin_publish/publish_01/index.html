@@ -11,13 +11,25 @@
 <body>
     <header id="home">
         <div>
-            <h1>ㅣ
+            <h1>
                 <a href="/">
                     <img src="images/logo.png" alt="welcome to Tajam!">
                 </a>
             </h1>
             <!-- todo nav>ul>li*7>a -->
             <nav>
+                <label for="mnav" class="mui">
+                <!-- mui = mobile user interface -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <!-- 
+                        aria-hidden="true" >> 접근성에서 자주 쓰이는 속성 
+                        접근성부분에서 별거 아니라고 넘어가라고 하는 속성임
+                        시각장애인 등..안 읽게해주는 것
+                    -->
+                </label>
+                <input type="checkbox" id="mnav" class="mui"></input>
                 <ul>  
                     <li><a href="#home" class="active">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
