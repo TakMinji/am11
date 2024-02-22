@@ -1,4 +1,17 @@
-
+.mont{
+    font-family: 'Montserrat';
+}
+.crim{
+    font-family: 'Crimson Pro';
+}
+/* 
+폰트 모듈방법  
+폰트가 동일하게 썼다면 자손을 감싸고 있는 부모에게 class 주면 됨
+input계열들은 직접 지정하거나 inherit 속성을 강제로 줘야함
+! 선생님은 개별 class는 앞에 주고 모듈 class는 뒤에 주심
+    >> 개별 속성이 뒤에 있으면 모듈을 씹어버릴 수 있고, 모듈이 깨지면 안되기때문에.
+* 모듈링은 cancle이 안날 수가 없기때문에 성격에 맞게 쓰면됨.
+*/
 
 @media screen and (min-width : 1280px){
 
