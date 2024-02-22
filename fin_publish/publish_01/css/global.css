@@ -49,6 +49,8 @@ class가 Area로 끝나는 직계 hr
     /* 위 width sizw는 보편적인 사이즈일뿐 나중에 실무가면 tablet구간이 더 늘어날 수도 있음 */
     #about,
     section.expArea,
+    section.teamArea ul,
+    section.worksArea h2,
     section.contactArea,
     footer > div{
         max-width: 600px; margin: 0 auto; padding: 70px 3%;
