@@ -439,7 +439,48 @@
         color: #343e5c; margin-right: 17px;
     }
  */
-
+    section.tosayArea{
+        background-color: white;
+    }
+    section.tosayArea > div{
+        max-width: 970px; margin: 0 auto; padding: 70px 0 85px;
+    }
+    /* Tip) global과 page영역 사이 공간을 똑같이 주는게 좋음 */
+    section.tosayArea > div h2{
+        font-size: 32px; color: #222328; text-align: center; font-weight: 900;
+        margin-bottom: 15px;
+    }
+    section.tosayArea > div > p{
+        font-size: 16px; color: #b9bed1; text-align: center; font-weight: 400; font-style: italic;
+        margin-bottom: 50px;
+    }
+    section.tosayArea > div ul:after{
+        content: ''; display: block; clear: both;
+    }
+    section.tosayArea > div ul li{
+        width: 27.64%; display: block; float: left; 
+    }
+    /* width 계산은 가장 넓은거 기준으로 계산 */
+    section.tosayArea > div ul li:not(:first-child){
+        margin-left: 8.54%;
+    }
+    /* margin-left 계산) 위 li width 27.64%*3해서 100%빼면 17.08% >> 이걸 2로 나눈 수치임 */
+    section.tosayArea > div ul li figure{
+        margin-bottom: 20px;
+    }
+    section.tosayArea > div ul li figure img{
+        float: left; margin-right: 20px;
+    }
+    section.tosayArea > div ul li figure figcaption dl dt{
+        font-size: 14px; color: #3a405b; font-weight: 500; line-height: 20px; 
+    }
+    section.tosayArea > div ul li figure figcaption dl dd{
+        font-size: 14px; font-style: italic; color: #b9bed1;
+    }
+    section.tosayArea > div ul li p{
+        font-size: 16px; color: #3a405b; line-height: 24px;
+    }
+/* ? tosayArea Fin */
 
     /* todsayArea todo. */
     /* section.tosayArea{
