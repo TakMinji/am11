@@ -6,6 +6,11 @@ flex는 자손들끼리 알아서 하는 타입이 아님
 기본은 부모가 배치시키는 방법(부모가 내리는 것)
 한번 붙으면 안떨어짐(물론 떨어지게 바꿀 순 있음. 반응형에서 어려워짐)
 (=/float는 반응형에서 쉽다. 반면 flex는 어렵다.)
+
+flex는 부모가 뭔짓거리를 하든 자손 안떨어짐
+>> 사용이 편하나 계산 잘못해도 티가 안나고 근거가 없기때문에 수정에 어렵다는 단점.
+
+* flex는 떨어뜨려야하는 구조가 있다면 퍼센트(%)보다 픽셀(px)을 많이씀.
 */
 
 .flexContainer{
@@ -49,11 +54,20 @@ flex는 자손들끼리 알아서 하는 타입이 아님
 .flexContainer.flow .flexItem{
     width: 500px;
 }
+.flexContainer.justifyContent{
+    justify-content: center; 
+}
 /* 
-flex는 부모가 뭔짓거리를 하든 자손 안떨어짐
->> 사용이 편하나 계산 잘못해도 티가 안나고 근거가 없기때문에 수정에 어렵다는 단점.
+우리입장에서 start는 기본위치(왼쪽이자 위) / and는 반대(오른쪽, 아래)
+원래는 x,y축이 정해져있지만 flex입장에선 영원한 x,y가 없음
+(direction의 row-revece, column-reverce 속성과 관련됨) 
+flex 공간배치에서는 justify(left,right),align(top,bottom) / stat,end로 통일
 
-* flex는 떨어뜨려야하는 구조가 있다면 퍼센트(%)보다 픽셀(px)을 많이씀.
+
+! justify, align의 flex 배치방법)
+content : 부모를 기준으로 자손을 배치
+items: 자손들끼리 배치(상대적으로 제일 안씀.  float나 inline-block에서 할 수 있기때문에)
+self : 자기 혼자 배치(치트키)
 */
 
 
