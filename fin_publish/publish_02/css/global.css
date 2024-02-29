@@ -45,6 +45,7 @@ a:not(.contentArea fieldset legend a){
     header > div,
     header + nav .slideNav,
     .contentArea,
+    section.bestArea,
     footer > div{
         max-width: 1170px; margin: 0 auto;
     }
