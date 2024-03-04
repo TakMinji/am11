@@ -64,6 +64,17 @@ space-evenly : 부모의 경계선까지 포함시켜서 균등하게 배분함
 space-around : 위 두개를 섞은 것 / 초기의 1번하고 5번하고 부모사이의 간격을 일정하게 두되,
 일정하게 둔 간격은 항목간 간격과 일치하지않음. 부모경계선에 닿지않는 상태에서 최대한 넓은 공간에 위차하고 싶을 때 씀.
 */
+    /*
+        justify-content : 
+        flex container의 main axis를 기준으로 flexItem을 수평(or수직) 정렬한다.
+        
+        flex-start (flexItem을 좌측 기준정렬)
+        flex-end (flexItem을 우측 기준정렬)
+        center (flexItem을 가운데 기준정렬)
+        space-between (flexItem 중 처음은 좌측기준, 마지막은 우측기준, 나머지는 동일간격으로 정렬)
+        space-around (모든 flexItem은 처음,마지막 사이를  동일간격으로 정렬 외 나머지 배치)
+        space-evenly (여유 공간을 flex 항목 사이의 공간 및 시작선 및 끝선과 flex 항목 간의 공간에 모두 균등하게 배분.)
+    */
 .flexContainer.justifyContent .flexItem{
     margin: 0;
 }
@@ -89,17 +100,6 @@ flex-wrap :nowrap 이면 alignContent작동안됨
 align-content: flex-start(상), center(중), flex-end(하);
 */
 
-    /*
-        justify-content : 
-        flex container의 main axis를 기준으로 flexItem을 수평(or수직) 정렬한다.
-        
-        flex-start (flexItem을 좌측 기준정렬)
-        flex-end (flexItem을 우측 기준정렬)
-        center (flexItem을 가운데 기준정렬)
-        space-between (flexItem 중 처음은 좌측기준, 마지막은 우측기준, 나머지는 동일간격으로 정렬)
-        space-around (모든 flexItem은 처음,마지막 사이를  동일간격으로 정렬 외 나머지 배치)
-        space-evenly (여유 공간을 flex 항목 사이의 공간 및 시작선 및 끝선과 flex 항목 간의 공간에 모두 균등하게 배분.)
-    */
 .flexContainer.alignContent .flexItem{
     width: 300px; margin: 0;
 }
