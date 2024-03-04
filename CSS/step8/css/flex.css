@@ -172,3 +172,25 @@ align-content: flex-start(상), center(중), flex-end(하);
     * flex-start - 내부 공간 기준으로 자신의 위치를 좌측으로 맞추기
     * flex-end - 내부 공간 기준으로 자신의 위치를 우측으로 맞추기
 */
+
+.flexContainer.orderItem .flexItem.order1{
+    order: 4;
+}
+.flexContainer.orderItem .flexItem.order2{
+    order: 3;
+}
+.flexContainer.orderItem .flexItem.order3{
+    order: 2;
+}
+.flexContainer.orderItem .flexItem:nth-of-type(4){
+    order: 1;
+}
+.flexContainer.orderItem .flexItem:nth-of-type(5){
+    order: 0;
+}
+/* 
+order 순서를 바꾸는 것
+0이 defualt값
+기존수치보다 order수치가 적어지면 우선으로 오게될 수 있음.
+기존수치보다 커지면 우선권을 잃고 뒤로감
+*/
