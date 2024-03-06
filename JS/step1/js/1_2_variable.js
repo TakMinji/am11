@@ -64,7 +64,7 @@
 
 // 만들기 var 변수이름 = 값.
 
-// case.1 기본생성
+// *case.1 기본 생성
 var cliName = "Mark";
 // "" << 글자이니까 js에게 아무 의미 부여하지말라고 하는 것.
 var age = 44;
@@ -75,3 +75,29 @@ var age = 44;
 // F12 Console창에서 cliName = "히비스커스" 선언하면 Mark는 나가고 히비스커스가 들어와서 작동
 // 새로고침하면 다시 Mark가 돌아옴 (저장을 안했으니까. 컴퓨터는 복합적인 사고-멀티 불가능)
 // 저장하는법(F12 Console창에서 명령) ex. age = age+10 / 새로고침하면 다시 돌아옴
+
+// *case.2 다중 생성
+var radius=10, pi = 3.14159265;
+
+// *case.3 변수의 특성
+var cup = 'Coffee';
+cup = 'Green Tea';
+cup = 'Water';
+/*
+    var cup = 'Coffee';
+    var cup = 'Green Tea';
+    var cup = 'Water';
+    ? before : 컵 세잔을 놓고 각각 다른 음료를 담았으나, 마지막 컵만 사용.
+    ? after : 컵 한잔에 coffee를 담았다가 버리고 Green Tea를 담았다가 버리고 Water를 담았다.
+*/
+
+// *case.4 연산자 사용시
+var numValue = 10;
+numValue = numValue+20; /* numValue+20; 이렇게만 입력하면 처리만 하고 출력을 안시켜서 안뜸 */
+/* = 한개만 쓰면 대입하라는 의미. == 두개가 붙어야 같다는 의미 / 정규식에서는 이런의미를 갖고있지만, 특정환경에 따라 달라질 수 있음 */
+
+// *case.5 현재 자신의 나이를 cliAge변수에 담고 출력한 후, 2-년 뒤 나이 역시 출력해보기.
+var cliAge = 26;
+console.log("나의 현재 나이는" + cliAge + "세 이고,");
+cliAge = cliAge + 20;
+console.log("20년 뒤에는" + cliAge + "세 입니다.");
