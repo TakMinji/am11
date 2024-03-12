@@ -23,3 +23,114 @@ function agePlus(){
     */
     console.log(result);
 }
+
+// * case.2 강제 숫자 -> 문자형변환
+function forcedstring(){
+    var a = '30';
+    var result = 1 + a + 10; //? 1, 문자 30, 10을 더해라
+    console.log("result의 자료유형은" + typeof(result) + "값은" + result);
+}
+
+//  *case.3 강제 불린 -> 숫자형변환
+function forcedNumber(){
+    var result = 2 + true; //? true = 1, false = 0.
+    console.log("result의 자료유형은" + typeof(result) + "값은" + result);
+}
+
+// *case.4 강제 불린 -> 문자형변환
+function forcedString2(){
+    var a ='2';
+    var result = a + true;
+    console.log("result의 자료유형은" + typeof(result) + "값은" + result);
+}
+
+// *case.5 test1에 들어있는 숫자를 문자로 명시적 형변환.
+/*
+    ? String
+    * String(Value); - 전역함수 -> 모든 자료형을 문자로 변환.
+
+    ? .toString();
+    * Number.toString(진수 ex.16); - 문자형을 진수변환이 필요할 때
+        진수를 안쓰면 String이랑 똑같음
+        Number에는 숫자 들어가면됨
+
+    ? .toFixed();
+    * Number.toFixed(); - (소수점자리를 반올림하는) 실수문자형이 필요할 때.
+        js는 소수점자리 9자리까지 가능하기때문에 소수점자리 필요한만큼 정리가 필요할 때   
+        상대적으로 많이 쓰진않음.
+*/
+function stringNumber(){
+    var test1 = 15;
+    console.log("변환 전 : " + typeof(test1) + ' = ' + test1);
+    var result = String(test1);
+    console.log("변환 후 : " + typeof(result) + ' = ' + result);
+}
+
+function stringNumb(){
+    var test1 = 15;
+    console.log("변환 전 : " + typeof(test1) + ' = ' + test1);
+    var result = test1.toString();
+    console.log("변환 후 : " + typeof(result) + ' = ' + result);
+}
+
+// ! tune. background-color random
+function bgColorRandom(){
+    setInterval(function(){
+     // function 뒤에 이름이 있으면 기명함수, 없으면 익명함수
+     var bgColor = Math.random()*0xfff; //? 15*16^2 + 15*16^1 + 15*16^0.
+     console.log(bgColor);
+     bgColor = parseInt(bgColor);
+     console.log(bgColor);
+     bgColor = bgColor.toString(16);
+     console.log(bgColor);
+     $("body").css("background-color", "#" + bgColor);
+ },1000);
+
+}
+// *case.6 test에 들어있는 문자를 숫자로 형변환.
+/*
+    ? Number();
+    * Number(value); - 전역함수, 정수, 실수 구분없이 형변환.
+
+    ? parse
+    * 1. parseInt(value); - 정수형변환.(실수버림).
+    * 2. parseFloat(value); - 실수형변환.(무조건실수화).
+*/
+function numbString(){
+    var test = '300.15625';
+    console.log("변환 전 : " + typeof(test) + ' = ' + test);
+    var result = parseInt(test) + 10;
+    console.log("변환 후 : " + typeof(result) + ' + 10 = ' + result);
+    // 실수는 버리고 정수형으로 변환 완료.
+}
+
+// todo.1 변수 test에 들어있는 숫자 100을 문자형으로 변형하여 각 상황에 맞는 result로 출력.(typeof 검수!);
+
+// todo. -1 암시적형변환 이용하기
+function todo1(){
+    var test = 100;
+    var result = test + ""; // todo. 암시적형변환을 이용하여 형변환.
+    console.log('변환 후' + typeof(result) + " = " + result);
+}
+function todo2(){
+    var test = 100;
+    var result = String(test); // todo. 명시적형변환(전역함수String)을 이용하여 형변환.
+    console.log('변환 후' + typeof(result) + " = " + result);
+}
+function todo3(){
+    var test = 100;
+    var result = test.toString(); // todo. 명시적형변환(꼬리함수toString)을 이용하여 형변환.
+    console.log('변환 후' + typeof(result) + " = " + result);
+}
+
+// todo.2 변수 test에 들어있는 문자를 숫자형으로 변형하여 연산가능하게. 각 상황에 맞는 result로 출력.(typeof 검수!);
+function todo4(){
+    var test = "100.51";
+    var result = parseFloat(test) + 150 + parseInt("20"); // todo. parse 이용하는 방법
+    console.log('변환 후' + typeof(result) + " = " + result);
+}
+function todo5(){
+    var test = "100.51";
+    var result = Number(test) + 150 + Number("20"); // todo. Number 이용하는 방법
+    console.log('변환 후' + typeof(result) + " = " + result);
+}
