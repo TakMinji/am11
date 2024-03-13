@@ -42,6 +42,7 @@ function lastDay(){
         alert("말일입니다.");
     }
 }
+
 //* todo. 1 현재 시간이 아침 or 점심 or 저녁 먹을 시간인지 판별하여 alert으로 출력해주기.
 //  * 아침(6~8) : "아침먹어", 점심(13~15) : '점심먹어', 저녁(그외나머지) : '그만먹어'
 function mealTime(){
@@ -59,3 +60,31 @@ function mealTime(){
         alert("그만먹어");
     }
 } 
+
+//* case.3 양,음수 판별.
+function numJugment(){
+    var numb = prompt('숫자를 입력하세요','양,음수 상관없음. 문자금지.');
+    console.log(typeof(numb) + '=' + numb);
+    numb = parseInt(numb); //형변환//
+    console.log(typeof(numb) + '=' + numb);
+    if(numb > 0){
+        alert('양수입니다.');
+    }else if(numb < 0){
+        alert('음수입니다.');
+    }else{
+        alert('입력된 값이 0 이거나 잘못된 값이 입력되었습니다.');
+    }
+}
+
+// todo. 홀수와 짝수의 판별 조건함수를 만들기.
+// ? 입력부 생성 - prompt();
+// alert("짝수입니다."); ? 짝수인 상황 / cssSelectior 사용불가
+// alert("홀수입니다."); ? 홀수인 상황
+// alert("??"); ? 예외처리 - 오류
+function oddOrEven(){
+    var numb = prompt('숫자를 입력하세요','양,음수 상관없음. 문자금지.');
+    console.log(typeof(numb) + '=' + numb);
+    numb = parseInt(numb);
+    console.log(typeof(numb) + '=' + numb);
+    if(numb )
+}
