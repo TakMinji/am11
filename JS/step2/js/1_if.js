@@ -86,5 +86,12 @@ function oddOrEven(){
     console.log(typeof(numb) + '=' + numb);
     numb = parseInt(numb);
     console.log(typeof(numb) + '=' + numb);
-    if(numb )
+    if(numb % 2 == 0){
+        alert("짝수입니다.");
+    }if(numb % 2 == 1){
+        alert("홀수입니다.");
+    }else{
+        alert("오류입니다.");
+    }
 }
+

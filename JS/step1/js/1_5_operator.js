@@ -44,3 +44,76 @@
     ? 접근 연산자
     * .
 */
+
+// *case.1 10이 저장된 변수 a, 숫자 20, 그리고 30을 더해서 result 변수에 저장 후 출력.
+function numbOP1(){
+    var a = 10;
+    var result = a + 20 + 30;
+    console.log("합산 : " + result);
+}
+
+
+// *case.2 50이 저장된 변수 a, 20이 저장된 변수 b를 곱한 값을 10으로 나누어 result 변수에 저장 후 출력.
+function numbOP2(){
+    var a = 50;
+    var b = 20;
+    var result = a*b/10;
+    console.log('복합연산 :' + result);
+}
+
+// *case.3 숫자 5를 2로 나누었을 때 나머지 값이 몇인지 result 변수에 저장 후 출력.
+function numbOP3(){
+    var result = 5%2;
+    console.log(result);
+}
+
+// *case.4 'hi'가 담긴 변수 a와 'WEB'이 담긴 변수 b를 합쳐 'hiWEB'을 출력.
+function stringOP(){
+    var a = 'hi';
+    var b = 'WEB';
+    console.log(a + b);
+}
+
+// *case.5 ul, li 구조의 tag를 html page에 삽입 후 출력.
+function operatorEx(){
+    var list = '';
+    list += '<ul>'; //? list = list+'<ul>';
+    list += '   <li>Hello</li>';
+    list += '   <li>JavaScript!</li>';
+    list += '</ul>';
+    document.body.innerHTML = list;
+}
+
+// todo. 연산자가 뒤로 올 경우의 결과를 예측해보기.
+// ! 작성 우선 -> 후 실행
+function numberPlusAfter(){
+    var number = 10;
+    alert(number++); //? 결과 : 10
+    alert(number++); //? 결과 : 11
+    alert(number++); //? 결과 : 12
+// 컴퓨터는 하나씩밖에 못하기때문에 첫번째 때 10을 먼저 불러오고 나서부터 1이 증가되는 것
+// 끝났지만 number는 12가 아닌 것. 10이 보였을때 이미 11이고 , 11이 보였을때 이미 12, 12가 보였을 때 이미 13...
+}
+
+// case.6 해결해보기
+function numberPlusBefore(){
+    var number = 10;
+    alert(++number);
+    alert(++number);
+    alert(++number);
+}
+
+// todo. 증감연산자 복합.
+function numberPlusTodo(){
+    var number = 10;
+    console.log(number++);  //? 
+    console.log(--number);  //? 
+    console.log(++number);  //? 
+    console.log(number--);  //? 
+    console.log(number++);  //? 
+    console.log(++number);  //? 
+    console.log(--number);  //? 
+    console.log(number++);  //? 
+    console.log(++number);  //? 
+    console.log(number); //? 최종 : 
+}
