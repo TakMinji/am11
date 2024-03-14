@@ -106,14 +106,75 @@ function numberPlusBefore(){
 // todo. 증감연산자 복합.
 function numberPlusTodo(){
     var number = 10;
-    console.log(number++);  //? 
-    console.log(--number);  //? 
-    console.log(++number);  //? 
-    console.log(number--);  //? 
-    console.log(number++);  //? 
-    console.log(++number);  //? 
-    console.log(--number);  //? 
-    console.log(number++);  //? 
-    console.log(++number);  //? 
-    console.log(number); //? 최종 : 
+    console.log(number++);  //? 출력 : 10 / 현재 : 11 
+    console.log(--number);  //? 출력 : 10 / 현재 : 10
+    console.log(++number);  //? 출력 : 11 / 현재 : 11
+    console.log(number--);  //? 출력 : 11 / 현재 : 10
+    console.log(number++);  //? 출력 : 10 / 현재 : 11
+    console.log(++number);  //? 출력 : 12 / 현재 : 12
+    console.log(--number);  //? 출력 : 11 / 현재 : 11
+    console.log(number++);  //? 출력 : 11 / 현재 : 12
+    console.log(++number);  //? 출력 : 13 / 현재 : 13.
+    console.log("최종 : " + number); //? 최종 : 13.
+}
+
+// *case.7 숫자 10이 담긴 변수a와 숫자 20이 담긴 변수b의 크기를 비교하여 결과를 출력.
+function compareOperator1(){
+    var a = 10;
+    var b = 20;
+    var result = a>b;
+    console.log("a > b = " + result);
+}
+
+// *case.8 숫자 10이 담긴 변수a와 숫자 20이 담긴 변수b가 서로 같은지 비교하여 결과를 출력.
+function compareOperator2(){
+    var a = 10;
+    var b = 20;
+    var result = a==b;
+    console.log('a = b ?' + result);
+}
+
+// *case.9 숫자 10이 담긴 변수a와 숫자 20이 담긴 변수b가 서로 다른지 비교하여 결과를 출력.
+function compareOperator3(){
+    var a = 10;
+    var b = 20;
+    var result = a!=b;
+    console.log("10 != 20 ?" + result);
+}
+
+// *case. 10 a변수에는 '여자', b변수에는 '웹디자이너'라는 값이 저장되어 있다. 담겨있는 두 값이 모두 맞는지 result변수에 저장후 출력.
+function ligicalOperator1(){
+    var a = "여자";
+    var b = "웹퍼블리셔";
+    var result = (a=="여자")&&(b=="웹디자이너");
+    console.log("두 결과가 모두" + result);
+// &&(곱, 그리고)를 썼기때문에 둘중에 하나라도 틀리면 false가 떨어짐.
+}
+
+// *case. 11 a변수에는 '남자', b변수에는 '웹퍼블리셔' 라는 값이 저장되어 있다. 담겨있는 두 값중 하나라도 맞는지 result변수에 저장 후 출력.
+function logicalOperator2(){
+    var a = "여자";
+    var b = "웹디자이너";
+    var result = (a=="남자")||(b=="웹퍼블리셔");
+    console.log("두 결과중 하나라도" + result);
+// ||(합, 이거나)를 썼기때문에 둘중에 하나가 틀려도 true가 떨어짐.  
+}
+
+// todo. 다음 코드를 작성 후 결과를 예상하여 적고 출력해보기.
+function compareOperator4(){
+    console.log(30 > 20 > 10); //? 결과 : true (x) -> false...
+    // ! hint : compute + r = 계산하는애. -> 순서대로
+    // * 30 > 20 -> true
+    // * true > 10 -> 암시적형변환 = 1 > 10
+    // ? falset
+}
+
+// todo. 해결하기
+function compareOperator4R(){
+    console.log(30 > 20 && 20 > 10);
+    // var a = 30;
+    // var b = 20;
+    // var c = 10;
+    // var result = (a > b)&&(b > c);
+    // console.log(result);
 }
