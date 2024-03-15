@@ -25,3 +25,22 @@ function switchGrammar(){
     // break가 무조건 switch 안에서만 쓰는 애는 아님(서로의 조건 관계가 맞을뿐). 
     // >> 만나는 즉시 자기가 소속된 logic(switch안에 들어있으면 switch, if안에 있으면 if)을 중단시킴. 
 }
+
+//  *case.2 Lotto과제를 switch로 변경
+function lotto(){
+    var numbValue = prompt("입력하실 번호는?");
+    switch (numbValue) {
+        case "1":
+            alert("1등 15억!");
+            break;
+        case "2":
+            alert("2등 5천만원!");
+            break;
+        case "3":
+            alert("3등 3백만원!");
+            break;
+        default:
+            alert("낙첨되었습니다.");
+            break;
+    }
+}
