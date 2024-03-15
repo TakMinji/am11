@@ -157,5 +157,14 @@ function userInfoCheck2(){
     // todo.3 거부메시지 *console.log("ID가 존재하지 않습니다.");
     // todo.4 거부메시지 *console.log("password가 틀렸습니다.");
     // ! 4번을 예외(else)로 던지지 말 것. - 허점이 많아지기때문에.
-    
+    if(userID=="Mark"&&userPW=="1234"){
+        console.log("Mark님으로 확인되었습니다.");
+    }else if(userID!="Mark"&&userPW!="1234"){
+        console.log("모든 정보가 맞지않습니다.");
+    }else if(userID!="Mark"){
+        console.log("ID가 존재하지 않습니다.");
+    }else if(userPW!="1234"){
+        console.log("password가 틀렸습니다.");
+    // 조건을 세분화할때는 else로 끝내지 않기.
+    }
 }
