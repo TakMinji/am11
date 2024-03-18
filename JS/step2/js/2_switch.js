@@ -72,5 +72,5 @@ function calculator(){
         default:
             alert("연산이 불가능한 값이 입력되었습니다.");
             break;
-    }
+    } 
 }
