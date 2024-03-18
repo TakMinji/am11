@@ -71,3 +71,28 @@ function answer5(){
     document.write((i+1)+"<br>");
     }
 }
+
+// *case.2 반복문 사용의 예 - 자신이 좋아하는 과일 4개를 배열로 배치하고 alert으로 순차출력.
+function favorFruit(){
+    var array = ["애플망고","딸기","수박","메론"]; //? 순서대로 [0,1,2,3]번 방 만들어짐. 0번방부터 생긴 것.
+    for(var i = 0; i < array.length; i++){
+        //★(중요) length : 개수 / array(변수이자 배열) 몇개냐 ? / 1,2,3..이거밖에 못함 / 태그 개수 구할 때도 쓸 수 있음(다각도로 활용가능)
+        alert(array[i]);
+    }
+    /* array = dataType : object. 초기화 = [].
+     - data가 머무르는 방
+     - ex) hotel : roomNumber. = data 역시도 indexNumber 부여받음.
+     ["딸기"] - array[0] 배열에 0번 발생.
+     ["딸기","메론"] - array[1] 배열에 1 발생.
+     = 2개의 data가 각각 0,1번 방 배정.
+    */
+}
+
+// todo. 지금까지 배웠던 JS 단원명을 배열을 활용해 출력하되, 숫자가 아닌 한글순서로 출력되게.
+function arrayFor(){
+    var date = ["변수", "연산자", "형변환", "조건문 if", "조건문 switch", "반복문 while", "반복문 for"];
+    // 0이라는 숫자일때는 첫번째가 나오면 됨.
+    for(var i = 0; i < date.length; i++){
+        alert(array[i]);
+    }
+}
