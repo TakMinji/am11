@@ -133,3 +133,12 @@ function arrayFor2(){
         document.write(swapNumb + "번째 내용 =" + data[i] + '<br>');
     }
 } 
+
+// *case.3 역반복 배열
+function reverseFavorFruit(){
+    var array = ["딸기","귤","수박","메론","포도"];
+    for(var i = array.length - 1; i>=0; i--){
+        document.write(array[i]);
+    }
+    // 정반복과 역반복의 차이 : length의 차이
+}
