@@ -142,3 +142,15 @@ function reverseFavorFruit(){
     }
     // 정반복과 역반복의 차이 : length의 차이
 }
+
+// *case.4 continue
+function forContinue(){
+    for (var i = 0; i<10; i++){
+        continue;
+        // break와 continue는 어느 한 곳에 귀속하지 않고 쓰고싶을 때 쓰는 것,특정 기능들을 실행하지 못하게 막아주는 부분이 서로 똑같음
+        // continue는 자신의 위에 있는 애들은 계속 실행하게 놔두는 애, 밑에 있는 애들은 절대로 실행이 안됨(근데 logic은 돌기때문에 계속 증가함.)
+        document.write(i + "<br>");
+    }
+    document.write("최종 i = " + i + "<br>");
+    // 얘는 해당 logic에 포함되어있지 않기때문에 실행됨. continue는 자기가 속해있는 logic만 담당.
+}
