@@ -154,3 +154,28 @@ function forContinue(){
     document.write("최종 i = " + i + "<br>");
     // 얘는 해당 logic에 포함되어있지 않기때문에 실행됨. continue는 자기가 속해있는 logic만 담당.
 }
+
+// *case.5 continue 활용 = 1 : 특정 숫자(3)를 걸러내기(filtering).
+// continue는 걸러내고 싶은 애들을 만들때 주로 사용함. 다만 continue만으로는 불가능. >> if사용 / continue-if 서로 형제같은 애들
+function continueEx(){
+    var text = '';
+    for(var i = 0; i < 10; i++){
+        if(i == 3){
+            continue;
+        }
+        text = text + i;
+    }
+    console.log(text);
+}
+
+// todo continue 문제 = 1부터 10까지 짝수에대한 누적총합을 출력하라.
+function runContinue(){
+    var output = 0;
+    for(var i = 1; i <= 10; i++){ 
+        if(i%2==1){
+            continue;
+        }
+        output += i;
+        console.log(output);
+    }
+}
