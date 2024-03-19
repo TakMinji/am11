@@ -244,3 +244,8 @@ function reverseHahalfPyramid(){
     }
     document.write(star);
 }
+
+// 과제 todo) 피라미드 만들어오기 
+//  B : for loop - 3
+//  W : for loop - 4
+// 공백이 역반복, 별이 찍히는게 정반복 / 짝수에 + 1 / 별 1,3,5,7,9 / 출력되는 방식은 정반복
