@@ -1,0 +1,50 @@
+/*
+    ? function (함수)
+    기존 반복문의 유지보수가 어려운 문제(여러개의 반복문의 각기 다른 value를 수정하기 등..),
+    중복코드가 많은 문제를 근본적으로 해결하여 코드의 재 사용 및 중복 제거, 유지보수의 용이성을 확보하기 위한 수단.
+*/
+
+// document.write("안녕? 방가와!"); 
+// document.write("안녕? 방가와!");
+// document.write("안녕? 방가와!");
+
+// *case. 1 매개변수(Parameter)가 있는 함수 만들기
+// ? 매개변수 or 인자, parameter -> paramVal...
+// ? 함수내 정해진 변수의 value(값)를 변경하여, 기존의 함수가 실행된 이후 접근이 불가한 것을 해결하기 위함.
+function helloExp(loopCount){
+    var comment = "안녕? 방가와!";
+    for(var i = 0; i < loopCount; i++){
+        document.write(comment,"<br>");
+    }
+}
+
+// *case.2 간단한 예 - 두개의 매개변수를 설정
+function sumParam(num1,num2){
+    var result = num1 + num2;
+    alert("두 수의 합은 ?" + result);
+}
+
+// *case.3 매개변수의 자리가 없어도 있는것처럼 - arguments(가변인자함수)
+// 가- 가능하다 변- 변화가 / 변화가 가능한 함수, 위에서 매개변수는 변할 수가 없어서 불편함이 있지만 가변인자함수는 변하는게 가능해서 해결가능.
+// 갯수 제한없고 내가 쓰는만큼 얼마든지 사용가능
+/* ? arguments 
+   * arguments 객체(object)는 모든 함수 안에서 사용하는 지역 변수.
+   * arguments를 이용해서 함수내 인수들을 참조할 수 있고 이 객체의 함수에 전달된 각 인수항목을 포함한다.
+   * 단, argumens는 array와 비슷해보이지만 length 산출 등을 제외하고는 array와 다르다.
+   * 필요에 따라 array로 추가 변환하여 사용할 수는 있다.
+*/
+function sumAll(){
+    console.log(typeof(arguments) + " : " + arguments.length);
+    var willReturn = 0;
+    for(var i = 0; i<arguments.length; i++){
+        willReturn += arguments[i];
+    }
+    console.log(willReturn);
+}
+
+// *case.4 "자신의 이름" 의 나이는 "자신의 나이"세 입니다. 를 arguments를 이용해 출력.
+function showInfo(){
+    console.log("[0] = " + arguments[0]);
+    console.log("[1] = " + arguments[1]);
+    alert(arguments[0] + "의 나이는" + arguments[1] + "세 입니다.");
+}
