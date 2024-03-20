@@ -263,3 +263,4 @@ function Pyramid(){
     }
     document.write(star);
 }
+
