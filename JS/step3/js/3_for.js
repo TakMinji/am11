@@ -249,3 +249,17 @@ function reverseHahalfPyramid(){
 //  B : for loop - 3
 //  W : for loop - 4
 // 공백이 역반복, 별이 찍히는게 정반복 / 짝수에 + 1 / 별 1,3,5,7,9 / 출력되는 방식은 정반복
+function Pyramid(){
+    var star = '';
+    for (var i = 1; i <= 10; i++){
+        for(var e = 10; e >= i; e--){
+            star += '&nbsp;';
+            // 공백은 &nbsp;
+        }
+        for(var s = 0; s < 2*i-1; s++){
+            star += '*';
+        }
+        star += '<br>';
+    }
+    document.write(star);
+}
