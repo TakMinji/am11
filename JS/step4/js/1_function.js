@@ -55,11 +55,89 @@ function showInfo(){
     * 함수 내부는 함수라는 범위 안에 갇히기 때문에, 한번 실행되면 함수 외부에서 접근 불가.
     * 이 때 매개변수를 활용하면 함수 내부로 data를 전달 할 수 있는데, return value는 이와 반대 되는 값.
     * 즉, 매개변수 값이 함수 외부에서 내부로 들어오는 입력 부라면, 리턴값은 함수 내부에서 처리한 결과를 함수 외부로 전달하기 위해 사용하는 출력 부.
+    
     !ex.1 함수f(x)안에 넣는 값이 매개변수, 결과로 나오는 x*x 가 리턴값.
         function f(x) { return x * x; }
         alert(f(3));
+
     !ex.2 alert에서 매개변수를 두개를 선언하면 추가된 매개변수를 무시한다.
     //*(매개변수가 초과 됐을 시) 또한 원래 함수의 매개변수보다 적게 입력하면 undefined를 출력한다.
         alert('기존매개변수', '추가매개변수');
         prompt('기존매개변수');
 */
+
+
+// *csse.5 두 수를 매개변수로 받고, 두 값을 더한 결과값을 리턴하는 함수를 만들어보자.
+function sumReturn1(num1,num2){
+    var result = num1 + num2;
+    return result;
+    // 호출부 return - 자기가 속해있는 함수를 무조건 실행한 곳으로 값을 보냄.
+}
+
+// *case.6 무한루프를 돌며 숫자를 입력받고 입력받은 수의 합을 화면에 출력하는 함수
+function infiniteSum(){
+    var sum = 0;
+    var count = 1;
+
+    while(true){
+        var value = parseInt(prompt('숫자만'));
+        if(value == 0){
+            document.write("종료");
+            return;
+            // * break와 return은 다르다.
+            // break는 가동되는 순간에 자기가 속해있는 logic을 종료시킴
+            // return은 자기가 속해있는 함수를 실행한 위치로 값을 전달 - 카드(return) 안에 물건(data)을 담아서 갈건지 안담고 그냥 갈건지.
+            // 값을 전달할게 없으니까 return이 그냥 함수를(전체 logic) 끝냄.
+        }
+        sum +=  value;
+        document.write(count + ". " + sum + "<br>");
+        count++;
+    }
+    document.write("총 " + count + "번 실행함.");
+}
+
+// todo. 다음 실행구문으로 전달받은 매개변수로 계산하여 결과를 출력하는 함수 만들기.
+/*
+    //* 실행구문
+    document.write("1 결과 =" + calculator("+", 20, 10) + "<br>");
+    document.write("2 결과 =" + calculator("-", 20, 10) + "<br>");
+    document.write("3 결과 =" + calculator("*", 20, 10) + "<br>");
+    document.write("4 결과 =" + calculator("/", 20, 10) + "<br>");
+    document.write("5 결과 =" + calculator("%", 20, 10) + "<br>");
+    //* 결과 
+    결과 = 30
+    결과 = 10
+    결과 = 200
+    결과 = 2
+    결과 = 잘못된 연산자 입니다.
+*/
+function calculator(op,numb1,numb2){
+    var result = '';
+
+   switch(op){
+    case "+": 
+        result = numb1 + numb2
+        break;
+    case "-": 
+        result = numb1 - numb2
+        break;
+    case "*": 
+        result = numb1 * numb2  
+        break;    
+    case "/": 
+        result = numb1 / numb2
+        break;              
+    default:
+        break;
+    }
+   return result;
+}
+// todo. 과제 - 위의 예제에 추가로 사칙연산부를 함수로 분리하여 보다 편하게 사용할 수 있게 만들기.
+function calculator2(){
+    // 
+    // 
+}
+function add(){}
+function sub(){}
+function mul(){}
+function div(){}
