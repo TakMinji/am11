@@ -167,3 +167,13 @@ function hi2(){
 function execute(func){
     func();
 }
+
+// *case.9 button click시 매개변수 값으로 넘긴 함수 호출하기
+function welcome(){
+    alert("혼자왔니?");
+}
+$(document).ready(function(){
+    $("#runEx9").click(welcome); //? jquery 문법
+    // >> button을 클릭했을 때 매개변수를 뭘 넣었느냐 ?
+    // ? $("#runEx9") => document.body.getElementsById("runEx9") V/JS
+});
