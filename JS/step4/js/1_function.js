@@ -149,3 +149,21 @@ function add(){}
 function sub(){}
 function mul(){}
 function div(){}
+
+// *case.7 함수를 변수에 담기.
+function hello(name){
+    console.log(name + "환영합니다.");
+}
+var func = hello;
+// 변수가 함수색깔로 바뀜 >> vs코드에서 '이 변수가 이제 곧 함수다'라고 인지하는 것.
+
+// *case.8 매개변수 값으로 함수 사용하여 중계하기.
+function hi1(){
+    console.log("밥먹었니?");
+}
+function hi2(){
+    console.log("니취팔로마?");
+}
+function execute(func){
+    func();
+}
