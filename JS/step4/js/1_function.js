@@ -113,29 +113,37 @@ function infiniteSum(){
 */
 function calculator(op,numb1,numb2){
     var result = '';
-
-   switch(op){
-    case "+": 
-        result = numb1 + numb2
-        break;
-    case "-": 
-        result = numb1 - numb2
-        break;
-    case "*": 
-        result = numb1 * numb2  
-        break;    
-    case "/": 
-        result = numb1 / numb2
-        break;              
-    default:
-        break;
+    switch(op){
+        case "+":
+            result = numb1 + numb2;
+            break;
+        case "-":
+            result = numb1 - numb2;
+            break;
+        case "*":
+            result = numb1 * numb2;
+            break;
+        case "/":
+            result = numb1 / numb2;
+            break;
+        default:
+            result = "잘못된 연산자 입니다.";
+            break;
     }
-   return result;
+    return result;
 }
 // todo. 과제 - 위의 예제에 추가로 사칙연산부를 함수로 분리하여 보다 편하게 사용할 수 있게 만들기.
+/* 
+//* 실행구문
+document.write(calculator2("+", 20, 10) + "<br>");
+document.write(add(20, 10) + "<br>");
+document.write(sub(20, 10) + "<br>");
+document.write(mul(20, 10) + "<br>");
+document.write(div(20, 10) + "<br>");
+*/
 function calculator2(){
-    // 
-    // 
+    // ! 아래 기술된 함수를 끌어와서 각 연산 가능하게 만들기.
+    // ! 위 예제처럼 이 함수 내에서 연산자 직접 표기 금지. ex> numb1 + numb2;
 }
 function add(){}
 function sub(){}
