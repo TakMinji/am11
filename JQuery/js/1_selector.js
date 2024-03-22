@@ -40,3 +40,9 @@ function addAll(){
         // css 문법과는 다르게 "" 감싸주기 / ,(콤마) 사용 / 마지막에 끝날때 구분해주는 ,(콤마) 쓰면 안됨
     });
 }
+
+// todo. 움직이기
+// (if문(prompt)으로 움직이기 박스사이즈, 원의 사이즈도 구해야함(css position,transition 사용)
+function move(){
+    
+}
