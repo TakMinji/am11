@@ -210,3 +210,22 @@ $(document).ready(function(){
     // >> button을 클릭했을 때 매개변수를 뭘 넣었느냐 ?
     // ? $("#runEx9") => document.body.getElementsById("runEx9") V/JS
 });
+
+// *case.10 함수를 매개변수로 전달받아 반복호출하기.
+function callFunctionTenTimes(otherFunction){
+    for(var i = 0; i < 10; i++){
+        otherFunction();
+    }
+}
+function justFunction(){
+    document.write('hello');
+}
+
+// *case.11 return Value를 함수로 사용하기.
+function createHello(){
+    function hello(user){
+        document.write(user + "welcome!");
+    }
+    return hello;
+}
+var result = createHello();
