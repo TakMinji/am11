@@ -1,3 +1,4 @@
+/* <과제 푼 것 - html파일 따로 보관중>
 function containerChange(){
     $("#container").css({
         "width" : "500px",
@@ -44,3 +45,4 @@ function move(){
         alert('잘못된 수치입니다.');
     }
     }
+*/
