@@ -55,6 +55,8 @@ $(document).ready(function(){
     detailMoveCircleExt();
     // todo. 아래 실행구문으로 작동되게 만들기.
     $("#btnDetailMove").click(detailMoveCircle);
+    // *case.3 x,y Axis + keyControl.
+    keyControl();
 });
 
 // *case, 1
@@ -113,3 +115,37 @@ function circleMovCommand(xpos,ypos){
 }
 
 // doubleEffenct : 기존 선점하고있는 event에 같은 event가 추가되었을 때.
+
+// *case.3
+function keyControl(){
+    var $circle = $(".circleKey");
+    var range = 50;
+    // range = 한번 눌렀을 때 움직일 수 있는 수치
+    var currentXpos = 0; //? 현재 위치 정보를 저장할 변수.
+    var currentYpos = 0;
+
+    $(document).keydown(function(e){
+        console.log("입력한 키의 code : " + typeof(e.keyCode) + e.keyCode);
+
+        // keydown -> 키 입력할 때 감지할 함수(눌렸을 때 상황만 감지.)
+        // 눌렸다는 상황 e 매개변수로 받는 것. (입력한 key가 들어온 것)
+        // * w : 87(Ypos-) 위, d : 68(Xpos+) 아래, s: 83(Ypos+), a: 65(Xpos-)
+        switch(e.keyCode){
+            case 87:
+                currentYpos -= range;
+                break;
+            case 68:
+                currentXpos += range;
+                break;
+            case 83: 
+                currentYpos += range;
+                break;
+            case 65:
+                cureentXpos -= range;
+                break;
+        }
+        // todo. 돌아다니는 원을 frame안에 가둬오기. 
+        $circle.css("left",currentXpos);
+        $circle.css("top",currentYpos);    
+    });  //? compareFunction : 비교함수 - key 자체가 100개가 넘음. - 무엇이 눌린지는 모름
+}
