@@ -49,9 +49,9 @@ function move(){
 
 /* 선생님 풀이 */
 $(document).ready(function(){
-    // *case.1 x Asis 원 움직이기
-    $("btnMoveCircle").click(moveCircle);
-    // *case.2 x,y Axis 원 움직이기 - 구조분리형
+    // *case. 1 x Axis 원 움직이기
+    $("#btnMoveCircle").click(moveCircle);
+    // *case. 2 x,y Axis 원 움직이기 - 구조분리형
     detailMoveCircleExt();
     // todo. 아래 실행구문으로 작동되게 만들기.
     $("#btnDetailMove").click(detailMoveCircle);
@@ -59,11 +59,11 @@ $(document).ready(function(){
 
 // *case, 1
 function moveCircle(){
-    var $circle = $("circle");
-    var xpos = prompt("0부터 300이하의 숫자만 입력하세요.");
+    var $circle = $(".circle");
+    var xpos = prompt("0부터 380이하의 숫자만 입력하세요");
     // ! prompt -> string 전달.
     xpos = parseInt(xpos);
-    if(xpos >= 0 && xpos <=380){
+    if(xpos >= 0 && xpos <= 380){
         $circle.css("left",xpos);
     }else{
         alert("잘못된 수치입니다.");
