@@ -1,6 +1,10 @@
 $(document).ready(function(){
+    // *case.1
     toggleCheck();
+    // *case.2
     toggleTodo();
+    // *case.3
+    tabUI();
 });
 function toggleCheck(){
     var $checkTarget = $(".material-icons.checkIco");
@@ -37,7 +41,7 @@ function toggleTodo(){
         toggleStatus = !toggleStatus;
         if(toggleStatus == true){
             $toggleTarget.text("visibility");
-            $toggleInput.attr("typy","text");
+            $toggleInput.attr("type","text");
         }else{
             $toggleTarget.text("visibility_off");
             $toggleInput.attr("type","password");
@@ -45,8 +49,18 @@ function toggleTodo(){
     });
 }
 
-function tab(){
-    var 
+function tabUI(){
+    $(".tabMenu li").click(function(){
+        // 익명함수쓴 것. 분리 가능함
+        var activeTab = "#"+$(this).attr("data-tabNumb");
+        // console.log(activeTab); 
+        // ? this : (event handler) 이벤트가 일어난 당사자를 구하는 것, 클릭 or 휠 등 다 걸리는 것(만능키)
+        $(".tabMenu li").removeClass("activated");
+        // ? removeClass :  $(".tabMenu li") 얘네 class activated를 제거한다. 
+        $(this).addClass("activated");
+        $("tabPage").removeClass("activated");
+        $(activeTab).addClass("activated");
+    });
 }
 
 
