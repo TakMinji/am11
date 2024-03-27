@@ -5,6 +5,8 @@ $(document).ready(function(){
     toggleTodo();
     // *case.3
     tabUI();
+    // *case.4
+    accControl(".accComponent li h3");
 });
 function toggleCheck(){
     var $checkTarget = $(".material-icons.checkIco");
@@ -62,6 +64,14 @@ function tabUI(){
         $(activeTab).addClass("activated");
     });
 }
+// add, remove, toggle -> 모든 동적요소 활용가능 
 
+function accControl(target){
+    $(target).click(function(){
+        $(this).toggleClass("active");
+        // toggle()<< 함수 안에 들어가는 class를 넣었다가 뺏다가.
+        // ? add - 추가만 가능 뺄 수는 없음 / remove - 제거
+    })
+}
 
 
