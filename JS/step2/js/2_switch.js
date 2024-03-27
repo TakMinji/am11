@@ -6,11 +6,7 @@
 // *case.1 문법 - 홀,짝 구분
 function switchGrammar(){
     var input = Number(prompt('숫자를 입력하라'));
-<<<<<<< HEAD
     switch (input % 2) {
-=======
-    switch (input % 2){
->>>>>>> a95707e732801df60bb848889cab22797238cbe2
         case 0:
             alert('짝수입니다.');
             break;
@@ -20,7 +16,8 @@ function switchGrammar(){
         default:
             alert('숫자가 아닙니다.');
             break;
-    }
+        }
+}
     // if는 esle, else if..이지만 switch는 if처럼 선행,후행 다중으로 쓰지않고 switch 하나임.
     // case가 걸리게끔 해야하는데 case를 걸리게 하는 애가 key값.
     // switch는 case by case로 값을 찾아내서 default가 있을 수도, 없을 수도 있음.
@@ -28,16 +25,12 @@ function switchGrammar(){
 
     // break가 무조건 switch 안에서만 쓰는 애는 아님(서로의 조건 관계가 맞을뿐). 
     // >> 만나는 즉시 자기가 소속된 logic(switch안에 들어있으면 switch, if안에 있으면 if)을 중단시킴. 
-}
+
 
 //  *case.2 Lotto과제를 switch로 변경
 function lotto(){
     var numbValue = prompt("입력하실 번호는?");
-<<<<<<< HEAD
     switch (numbValue) {
-=======
-    switch (numbValue){
->>>>>>> a95707e732801df60bb848889cab22797238cbe2
         case "1":
             alert("1등 15억!");
             break;
@@ -51,37 +44,4 @@ function lotto(){
             alert("낙첨되었습니다.");
             break;
     }
-<<<<<<< HEAD
-=======
-}
-
-// todo. switch문을 이용한 계산기
-// ? 첫번째 숫자와 연산자와 두번째 숫자를 입력받아 계산해주는 사칙연산기.
-function calculator(){
-    var firstNumb = prompt("첫번째 숫자를 입력하세요.");
-    var operator = prompt("사칙연산자중(+,-,*,/) 하나를 입력하세요.");
-    var lastNumb = prompt("두번째 숫자를 입력하세요.");    
-
-    // ? 형변환
-    firstNumb = Number(firstNumb);
-    lastNumb = Number(lastNumb);
-
-    switch (operator){
-        case '+':
-            alert(firstNumb + lastNumb);
-            break;
-        case '-':
-            alert(firstNumb - lastNumb);
-            break;
-        case '*':
-            alert(firstNumb * lastNumb);
-            break;
-        case '/':
-            alert(firstNumb / lastNumb);
-            break;
-        default:
-            alert("연산이 불가능한 값이 입력되었습니다.");
-            break;
-    } 
->>>>>>> a95707e732801df60bb848889cab22797238cbe2
 }
