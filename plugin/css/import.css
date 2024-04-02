@@ -1,0 +1,6 @@
+@import url('reset.css');
+/* reset.css - 태그가 갖고태어나는 걸 무효화 / 그렇기때문에 무조건 위에 위치. */
+@import url('jquery.bxslider.css');
+/* 포트폴리오 만들 땐 page.css에 속하면 됨. 지금은 슬라이드 예시로 만들기 위해 import에 위치한것뿐임. */
+@import url('customize.bxslider.css');
+/* 내가 작성할 파일은 항상 맨 밑에 위치. */
