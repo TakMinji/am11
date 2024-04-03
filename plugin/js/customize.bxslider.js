@@ -15,8 +15,18 @@ $(document).ready(function(){
       hideControlOnEnd: false,
 
       // *adaptiveHeight
-      adaptiveHeight: true
+      adaptiveHeight: true,
       // 안에 들어가있는 img의 비율이 다를 때 프레임 능동적으로 조절해주는 것
+      adaptiveHeightSpeed: 750,
+      video: true,
+      easing: 'ease-in-out',
+      captions: true,
+      responsive : true, 
+
+      //  *pager - indicator
+      pager: true,
+      pagerType: 'full',
+      // pagerShortSeparator: ' ~ '
       
     });
   });
