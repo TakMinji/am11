@@ -32,7 +32,10 @@ $(document).ready(function(){
       
       // *Controler
       controls: true,
-      
+      // nextSelector: '.btn_next',
+      // prevSelector: '.btn_prev',
+      // nextText: '다음',
+      // prevText: '이전'
 
     });
   });
