@@ -6,6 +6,8 @@
     border: none;
     background: transparent;
     margin-bottom: 50px;
+    /* ! carousel */
+    max-width: 1320px; margin: 0 auto 50px;
 }
 
 /* ? caption customize */
@@ -71,51 +73,72 @@
 /*  ? pagerSelector customize */
 
 .customPager{
-    display: flex; max-width: 1000px; margin: 0 auto 20px; list-style: none; 
-  }
-  .customPager li{
-    width: 20%; align-self: center;
-  }
-  .customPager li:not(:first-child){
-    margin-left: 2%;
-  }
-  .customPager li a{
-    display: block; opacity: 0.5; transition: all 0.35s ease-in-out;
-    border: 3px solid transparent;
-  }
-  .customPager li a.active{
-    padding: 5px; border: 3px solid black; opacity: 1;
-  }
-  .customPager li a img{
-    width: 100%; display: block;
-  }
-  /* ? pagerCustom customize */
-
-  .bx-wrapper .bx-controls-direction a{
-    height: 100%; top: 0; background-color: rgba(255, 255, 255, 0.7) !important; margin-top: 0;
-  }
-  /* !important -> 우선권을 뺏는 것(important 선언한 것을 강제 우선시 하는 것, 원래 쓰면 안됨) */
-  .bx-wrapper .bx-controls-direction .bx-prev{
-    left: 0; background: url('../images/controls_left.png') center / 24px no-repeat;
-  }
-  .bx-wrapper .bx-controls-direction .bx-next{
-    right: 0; background: url('../images/controls_right.png') center / 24px no-repeat;
-  }
-  .bx-wrapper .bx-controls-direction .bx-prev:hover,
-  .bx-wrapper .bx-controls-direction .bx-prev:focus{
-    background-image : url('../images/controls_left_hover.png');
-  }
-  .bx-wrapper .bx-controls-direction .bx-next:hover,
-  .bx-wrapper .bx-controls-direction .bx-next:focus{
-    background-image : url('../images/controls_right_hover.png');
-  }
-  /* ? controls customize */
-
-  [class^='btn_']{
-    width: 50px; line-height: 25px; background-color: black; border-radius: 10px;
-    display: inline-block;
-  }
-  [class^='btn_'] a{
-    display: block; font-size: 14px; color: white; text-decoration: none;
-    text-align: center;
-  }
+    max-width: 1000px; margin: 0 auto 20px; list-style: none; 
+    /* display: flex; */
+    /* ! carousel Code */
+    display: none;
+}
+.customPager li{
+  width: 20%; align-self: center;
+}
+.customPager li:not(:first-child){
+  margin-left: 2%;
+}
+.customPager li a{
+  display: block; opacity: 0.5; transition: all 0.35s ease-in-out;
+  border: 3px solid transparent;
+}
+.customPager li a.active{
+  padding: 5px; border: 3px solid black; opacity: 1;
+}
+.customPager li a img{
+  width: 100%; display: block;
+}
+/* ? pagerCustom customize */
+.bx-wrapper .bx-controls-direction a{
+  height: 100%; top: 0; background-color: rgba(255, 255, 255, 0.7) !important; margin-top: 0;
+}
+/* !important -> 우선권을 뺏는 것(important 선언한 것을 강제 우선시 하는 것, 원래 쓰면 안됨) */
+.bx-wrapper .bx-controls-direction .bx-prev{
+  left: 0; background: url('../images/controls_left.png') center / 24px no-repeat;
+}
+.bx-wrapper .bx-controls-direction .bx-next{
+  right: 0; background: url('../images/controls_right.png') center / 24px no-repeat;
+}
+.bx-wrapper .bx-controls-direction .bx-prev:hover,
+.bx-wrapper .bx-controls-direction .bx-prev:focus{
+  background-image : url('../images/controls_left_hover.png');
+}
+.bx-wrapper .bx-controls-direction .bx-next:hover,
+.bx-wrapper .bx-controls-direction .bx-next:focus{
+  background-image : url('../images/controls_right_hover.png');
+}
+/* ? controls customize */
+[class^='btn_']{
+  width: 50px; line-height: 25px; background-color: black; border-radius: 10px;
+  display: inline-block;
+}
+[class^='btn_'] a{
+  display: block; font-size: 14px; color: white; text-decoration: none;
+  text-align: center;
+}
+.newAutoControls .bx-controls-auto{
+    display: flex; max-width: 1320px; margin: 0 auto;
+}
+.newAutoControls .bx-controls-auto .bx-controls-auto-item{
+    flex: 1 auto;
+}
+.newAutoControls .bx-controls-auto .bx-controls-auto-item a{
+    display: block; text-indent: -9999px; padding: 10px 0; border-width: 3px;
+    border-style: solid; border-color: transparent;
+}
+.newAutoControls .bx-controls-auto .bx-controls-auto-item a.active{
+    border-color: rgba(0,0,0,0.7);
+}
+.newAutoControls .bx-controls-auto .bx-controls-auto-item .bx-start{
+    background: url('../images/auto_play.png') center / 24px no-repeat #8aa7ff;
+}
+.newAutoControls .bx-controls-auto .bx-controls-auto-item .bx-stop{
+    background: url('../images/auto_stop.png') center / 24px no-repeat #ff8a8a;
+}
+/* ? autoConrols customize */
