@@ -5,7 +5,7 @@
     box-shadow: none;
     border: none;
     background: transparent;
-    margin-bottom: 120px;
+    margin-bottom: 50px;
 }
 
 /* ? caption customize */
@@ -52,3 +52,61 @@
 /* 수정할 것들이 있다면 얼마든지 수정이 가능하다 ! */
 /* 커스텀마이징 안하는 것들은 지우기 */
 
+.newPager .bx-pager.bx-default-pager{
+    text-align: center;
+}
+.newPager .bx-pager.bx-default-pager .bx-pager-item{
+    display: inline-block;
+}
+.newPager .bx-pager.bx-default-pager .bx-pager-item:not(:first-of-type){
+    margin-left: 2%;
+}
+.newPager .bx-pager.bx-default-pager .bx-pager-item a.bx-pager-link{
+    text-decoration: none; padding: 17px 20px; display: block; background-color: #eaeaea;
+    border-radius: 40px; font-size: 14px; color: black;
+}
+.newPager .bx-pager.bx-default-pager .bx-pager-item a.bx-pager-link.active{
+    font-weight: bold; color: white; background-color: black;
+}
+/*  ? pagerSelector customize */
+
+.customPager{
+    display: flex; max-width: 1000px; margin: 0 auto 20px; list-style: none; 
+  }
+  .customPager li{
+    width: 20%; align-self: center;
+  }
+  .customPager li:not(:first-child){
+    margin-left: 2%;
+  }
+  .customPager li a{
+    display: block; opacity: 0.5; transition: all 0.35s ease-in-out;
+    border: 3px solid transparent;
+  }
+  .customPager li a.active{
+    padding: 5px; border: 3px solid black; opacity: 1;
+  }
+  .customPager li a img{
+    width: 100%; display: block;
+  }
+  /* ? pagerCustom customize */
+
+  .bx-wrapper .bx-controls-direction a{
+    height: 100%; top: 0; background-color: rgba(255, 255, 255, 0.7) !important; margin-top: 0;
+  }
+  /* !important -> 우선권을 뺏는 것(important 선언한 것을 강제 우선시 하는 것, 원래 쓰면 안됨) */
+  .bx-wrapper .bx-controls-direction .bx-prev{
+    left: 0; background: url('../images/controls_left.png') center / 24px no-repeat;
+  }
+  .bx-wrapper .bx-controls-direction .bx-next{
+    right: 0; background: url('../images/controls_right.png') center / 24px no-repeat;
+  }
+  .bx-wrapper .bx-controls-direction .bx-prev:hover,
+  .bx-wrapper .bx-controls-direction .bx-prev:focus{
+    background-image : url('../images/controls_left_hover.png');
+  }
+  .bx-wrapper .bx-controls-direction .bx-next:hover,
+  .bx-wrapper .bx-controls-direction .bx-next:focus{
+    background-image : url('../images/controls_right_hover.png');
+  }
+  /* ? controls customize */

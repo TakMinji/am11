@@ -23,10 +23,16 @@ $(document).ready(function(){
       captions: true,
       responsive : true, 
 
-      //  *pager - indicator
-      pager: true,
-      pagerType: 'full',
-      // pagerShortSeparator: ' ~ '
+      // *pager - indicator
+      pager: true, //? default: true. pager 켜기/끄기
+      pagerType: 'full', //? default: full.(circle). short: count로 변경
+      //? pagerShortSeparator: '/'  default: / -> . 식별자변경.
+      //? pagerSelector: '.newPager' default: ''. 공간 생성 및 class 부여 하면 pager 뼈대제공.
+      pagerCustom: '.customPager',
       
+      // *Controler
+      controls: true,
+      
+
     });
   });
